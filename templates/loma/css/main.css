@@ -25,7 +25,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #menu_proyecto ul li{border-bottom:1px solid #d7d1c4;}
 #main #menu_proyecto ul li a{display:block;text-transform:uppercase;font:bold 24px Georgia,serif;text-align:center;padding:1em;color:#000;text-decoration:none;cursor:pointer;}
 #main #menu_proyecto ul li a span{display:block;font-size:14px;font-style:italic;font-weight:normal}
-#main #menu_proyecto ul li a:hover{background:#db841e;background-image:-webkit-linear-gradient(top,#fb9114,#c1700b);background-image:-o-linear-gradient(top,#fb9114,#c1700b);background-image:linear-gradient(to bottom,#fb9114,#c1700b);color:#fff;text-shadow:0 2px 0 rgba(0,0,0,0.5)}
+#main #menu_proyecto ul li a:hover{background:#000;background-image:-webkit-linear-gradient(top,#fb9114,#c1700b);background-image:-o-linear-gradient(top,#fb9114,#c1700b);background-image:linear-gradient(to bottom,#fb9114,#c1700b);color:#fff;text-shadow:0 2px 0 rgba(0,0,0,0.5)}
 #main #slider .slide{overflow:hidden;position:relative}
 #main #slider .cir_banner{position:absolute;top:10%;left:53%;background:url("../img/cir_banner.png") right 0 no-repeat;width:262px;height:214px;padding:70px 60px 90px 58px;color:#fff;text-align:center;text-decoration:none;}
 #main #slider .cir_banner span{display:block}
@@ -33,7 +33,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #slider .cir_banner .p{font:normal 1.7em Georgia,serif;margin:0}
 #main .franja{display:block;position:absolute;bottom:0;left:0;height:174px;width:100%;background:url("../img/textura_franja.png") 50% 0 repeat;text-align:center;color:#fff;}
 #main .franja h1{font:normal 75px Georgia,serif;text-transform:uppercase;margin:0;padding-top:15px}
-#main .franja .linea{background:#db841e;height:5px;margin:5px 0}
+#main .franja .linea{background:#000;height:5px;margin:5px 0}
 #main .franja span{display:block;font:italic normal 15px Georgia,serif}
 #main #contacto,#main #plano{zoom:1;}
 #main #contacto .columna,#main #plano .columna{float:left;width:420px;background:#eaece3;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
@@ -47,7 +47,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #contacto .columna .form-item .form-text:hover,#main #plano .columna .form-item .form-text:hover,#main #contacto .columna .form-item .form-text:focus,#main #plano .columna .form-item .form-text:focus,#main #contacto .columna .form-item textarea:hover,#main #plano .columna .form-item textarea:hover,#main #contacto .columna .form-item textarea:focus,#main #plano .columna .form-item textarea:focus{background:#f9f5f1;border-color:#dd841d}
 #main #contacto .columna .form-item textarea,#main #plano .columna .form-item textarea{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font:normal 15px Georgia,serif;color:#999;background:none;width:220px;height:100px;display:block;float:left;resize:none}
 #main #contacto .columna .buttons,#main #plano .columna .buttons{width:360px;margin-top:10px;}
-#main #contacto .columna .buttons button,#main #plano .columna .buttons button,#main #contacto .columna .buttons input[type="submit"],#main #plano .columna .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #db841e;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercase}
+#main #contacto .columna .buttons button,#main #plano .columna .buttons button,#main #contacto .columna .buttons input[type="submit"],#main #plano .columna .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #000;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercase}
 #main #contacto .columna .marca,#main #plano .columna .marca{background:url("../img/marca.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
 #main #contacto .columna .marca2,#main #plano .columna .marca2{background:url("../img/marca2.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
 #main #contacto .plan,#main #plano .plan{float:left;}
@@ -71,13 +71,13 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #plano #mapa .details-item{margin:20px auto;text-align:center;}
 #main #plano #mapa .details-item .detail-info{background-color:rgba(0,0,0,0.7);margin-top:20px}
 #main #plano #mapa .details-item .panel{display:inline-block;vertical-align:top;text-align:left;margin-right:10px;}
-#main #plano #mapa .details-item .panel h3{color:#db841e;font:bold 18px Georgia,serif}
+#main #plano #mapa .details-item .panel h3{color:#000;font:bold 18px Georgia,serif}
 #main #plano #mapa .details-item .panel ul li{font:italic 14px Georgia,serif}
 #main_footer{position:relative;background:#f9f5f1;height:46px;overflow:hidden;display:block;clear:both;}
 #main_footer #copyright{float:left;margin-left:11px;margin-top:11px;position:relative}
 #main_footer #redes{position:absolute;right:12px;top:9px;font:italic normal 15px Georgia,serif;color:#95897c;}
 #main_footer #redes .label{float:left;padding-right:3px;padding-top:5px}
-#main_footer #redes a{display:inline-block;vertical-align:top;margin-left:5px;background:#db841e;color:#f9f5f1;text-decoration:none;padding:.5em}
+#main_footer #redes a{display:inline-block;vertical-align:top;margin-left:5px;background:#000;color:#f9f5f1;text-decoration:none;padding:.5em}
 @media only screen and (max-width:  1030px){#main_header{height:62px;}
 #main_header #logo img{height:62px}
 #main_header #menu ul li a,#main_header #menu ul li span{background-position:7px 26px;padding:23px 7px 17px 24px}
