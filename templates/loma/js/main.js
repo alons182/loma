@@ -24,14 +24,6 @@ $(function() {
 
     });
 
-    /* $('.detail-info').mCustomScrollbar({
-        theme:"dark",
-        scrollButtons:{
-          enable:true
-        }
-
-    });*/
-
     // NAV MOBILE
     $('#btn_nav').click(function(){
         $('#main_header nav').toggle();
@@ -111,25 +103,18 @@ $(function() {
             $('#main .map').height(height_dispo - ($('#main .info-top').height())).width(largeur_dispo);
             $('#main .mapa-proyecto').height(height_dispo - ($('#main .info-top').height())).width(largeur_dispo);
             
-            
-            // scrollbar
-           // panel_scroll = $('.columna').jScrollPane({showArrows: true}).data('jsp');
-            //if(panel_scroll == null){
-            //    panel_scroll = $('.columna').mCustomScrollbar();
-            //}
             $('.columna').mCustomScrollbar("update");
            
-           // console.log(panel_scroll);
+           
         } else {
             // mobile            
             $('#main .columna').height('auto').width('auto');
             $('#main .plan').width('100%');
             $('#main .map').height('250px').width('100%');
             
-            //if(panel_scroll != null){
-                //$('.columna').mCustomScrollbar("destroy");
+            
             $('.columna').mCustomScrollbar("disable",true);
-           // }
+           
         }
 
 
@@ -150,15 +135,11 @@ $(function() {
 
        
 
-    },function(){
-
-       // $('.info-lotes .title h3').val('');
-        //$('.info-lotes .description').val('');
     });
 	
     $('.lote').on('click',function(e){
         e.preventDefault();
-       console.log($('#'+e.currentTarget.id));
+       //console.log($('#'+e.currentTarget.id));
        $("div.overlay-proyecto").fadeToggle("fast");
 
     });
