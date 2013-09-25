@@ -74,7 +74,7 @@ $(function() {
             height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('.item-page').height()) - ($('#main_footer').height());
             width_dispo = getWindowWidth() - getScrollerWidth();
 
-            $('#main').height(height_dispo).width(width_dispo);
+            //$('#main').height(height_dispo).width(width_dispo);
             $('#slider .slide').height(height_dispo).width(width_dispo);
 
             ratio_dispo = width_dispo / height_dispo;
