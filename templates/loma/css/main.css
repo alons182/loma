@@ -1,0 +1,202 @@
+@font-face{font-family:'loma';src:url("../fonts/loma.eot");src:url("../fonts/loma.eot?#iefix") format('embedded-opentype'),url("../fonts/loma.woff") format('woff'),url("../fonts/loma.ttf") format('truetype'),url("../fonts/loma.svg#loma") format('svg');font-weight:normal;font-style:normal}
+[data-icon]:before{font-family:'loma';content:attr(data-icon);speak:none;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-twitter,.icon-facebook{font-family:'loma';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}
+.icon-twitter:before{content:"\e003"}
+.icon-facebook:before{content:"\e004"}
+*:focus{outline:0}
+.jspArrowDown,.mCSB_buttonDown{background-image:url("../img/flecha_down.gif") !important;background-position:50% 50% !important;background-repeat:no-repeat;background:#cfc8c0;width:10px}
+.jspArrowUp,.mCSB_buttonUp{background-image:url("../img/flecha_up.gif") !important;background-position:50% 50% !important;background-repeat:no-repeat;background:#cfc8c0;width:10px}
+body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%;margin:0;overflow-y:scroll;padding:0;position:relative}
+#main_header{background:#222;color:#fff;display:block;height:72px;position:relative;}
+#main_header a{color:#fff}
+#main_header #logo{position:absolute;top:0;left:0}
+#main_header #btn_nav{display:none}
+#main_header #menu{margin-left:130px;font:italic normal 15px Georgia,serif;display:block;}
+#main_header #menu ul{list-style-type:none;margin:0;padding:0 0 0 25px;}
+#main_header #menu ul li{display:inline-block;vertical-align:top;}
+#main_header #menu ul li a,#main_header #menu ul li span{display:block;background:url("../img/icono_nav.png") 15px 31px no-repeat;background-size:13px 12px;padding:28px 15px 22px 35px;height:22px;outline:none;position:relative;text-decoration:none}
+#main_header #menu ul li a:hover,#main_header #menu ul li span:hover{background-image:url("../img/icono_nav_naranja.png")}
+#main_header #menu ul .active a,#main_header #menu ul .active span{background-image:url("../img/icono_nav_naranja.png");background-color:#fff;color:#000}
+#main_header .idiomas{position:absolute;right:20px;top:30px;font:normal 12px Georgia,serif;}
+#main_header .idiomas a{background:url("../img/icono_circulo_blanco.png") 0 0 no-repeat;padding-left:26px;padding-bottom:5px;padding-top:3px}
+#main{position:relative;}
+#main #menu_proyecto{position:absolute;top:0;z-index:1;background:#f9f5f1;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
+#main #menu_proyecto ul{margin:0;padding:0;}
+#main #menu_proyecto ul li{border-bottom:1px solid #d7d1c4;}
+#main #menu_proyecto ul li a{display:block;text-transform:uppercase;font:bold 24px Georgia,serif;text-align:center;padding:1em;color:#000;text-decoration:none;cursor:pointer;}
+#main #menu_proyecto ul li a span{display:block;font-size:14px;font-style:italic;font-weight:normal}
+#main #menu_proyecto ul li a:hover{background:#000;background-image:-webkit-linear-gradient(top,#fb9114,#c1700b);background-image:-o-linear-gradient(top,#fb9114,#c1700b);background-image:linear-gradient(to bottom,#fb9114,#c1700b);color:#fff;text-shadow:0 2px 0 rgba(0,0,0,0.5)}
+#main #slider .slide{overflow:hidden;position:relative}
+#main #slider .cir_banner{position:absolute;top:10%;left:53%;background:url("../img/cir_banner.png") right 0 no-repeat;width:262px;height:214px;padding:70px 60px 90px 58px;color:#fff;text-align:center;text-decoration:none;}
+#main #slider .cir_banner span{display:block}
+#main #slider .cir_banner .h2{font:italic bold 36px/36px Georgia,serif;text-transform:uppercase;border-bottom:1px dotted #fff;padding-bottom:9px;margin:14px 0 9px 0}
+#main #slider .cir_banner .p{font:normal 1.7em Georgia,serif;margin:0}
+#main .franja{display:block;position:absolute;bottom:0;left:0;height:174px;width:100%;background:url("../img/textura_franja.png") 50% 0 repeat;text-align:center;color:#fff;}
+#main .franja h1{font:normal 75px Georgia,serif;text-transform:uppercase;margin:0;padding-top:15px}
+#main .franja .linea{background:#000;height:5px;margin:5px 0}
+#main .franja span{display:block;font:italic normal 15px Georgia,serif}
+#main #contacto,#main #plano{zoom:1;}
+#main #contacto .columna,#main #plano .columna{float:left;width:420px;background:#eaece3;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
+#main #contacto .columna h1,#main #plano .columna h1{font:normal 40px Georgia,serif;color:#333;margin:30px 0 20px 20px;text-transform:uppercase}
+#main #contacto .columna .inner,#main #plano .columna .inner{padding:20px 0 20px 20px}
+#main #contacto .columna .form-item:after,#main #plano .columna .form-item:after{clear:both}
+#main #contacto .columna .form-item:before,#main #plano .columna .form-item:before,#main #contacto .columna .form-item:after,#main #plano .columna .form-item:after{content:"";display:table}
+#main #contacto .columna .form-item,#main #plano .columna .form-item{margin-top:5px;zoom:1;}
+#main #contacto .columna .form-item label,#main #plano .columna .form-item label{font:normal 14px Georgia,serif;color:#333;width:130px;float:left;display:block;text-align:right;margin-right:10px;padding-top:10px}
+#main #contacto .columna .form-item .form-text,#main #plano .columna .form-item .form-text{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font:normal 15px Georgia,serif;color:#999;background:none;width:220px;display:block;float:left}
+#main #contacto .columna .form-item .form-text:hover,#main #plano .columna .form-item .form-text:hover,#main #contacto .columna .form-item .form-text:focus,#main #plano .columna .form-item .form-text:focus,#main #contacto .columna .form-item textarea:hover,#main #plano .columna .form-item textarea:hover,#main #contacto .columna .form-item textarea:focus,#main #plano .columna .form-item textarea:focus{background:#f9f5f1;border-color:#dd841d}
+#main #contacto .columna .form-item textarea,#main #plano .columna .form-item textarea{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font:normal 15px Georgia,serif;color:#999;background:none;width:220px;height:100px;display:block;float:left;resize:none}
+#main #contacto .columna .buttons,#main #plano .columna .buttons{width:360px;margin-top:10px;}
+#main #contacto .columna .buttons button,#main #plano .columna .buttons button,#main #contacto .columna .buttons input[type="submit"],#main #plano .columna .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #000;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercase}
+#main #contacto .columna .marca,#main #plano .columna .marca{background:url("../img/marca.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
+#main #contacto .columna .marca2,#main #plano .columna .marca2{background:url("../img/marca2.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
+#main #contacto .plan,#main #plano .plan{float:left;}
+#main #contacto .plan .info-top,#main #plano .plan .info-top{background:url("../img/textura_franja.png") 50% 0 repeat;height:85px;color:#fff;}
+#main #contacto .plan .info-top a,#main #plano .plan .info-top a{color:#fff}
+#main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{padding-top:1.5em;padding-left:1em;margin:0;font:italic 20px Georgia,serif}
+#main #plano p{font:italic normal 18px Georgia,serif}
+#main #plano .info-lotes{background:#fff;padding:1em;width:320px;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
+#main #plano .info-lotes h3{margin-top:0;font:bold 24px Georgia,serif}
+#main #plano .info-lotes span{display:block;font:normal 18px Georgia,serif}
+#main #plano #mapa{position:relative;}
+#main #plano #mapa .overlay-proyecto{position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.7);z-index:1;color:#fff;display:none;overflow:hidden;}
+#main #plano #mapa .overlay-proyecto .close{color:#fff;text-decoration:none;display:block;background:url("../img/icono_circulo_blanco.png") 3px 3px no-repeat;padding-left:26px;padding-right:5px;padding-bottom:5px;padding-top:5px;float:right;border:1px solid #fff;margin-right:10px;margin-top:10px}
+#main #plano #mapa .mapa-proyecto{background:url("../img/plano.jpg") 0 0 no-repeat;width:100%;height:100%;}
+#main #plano #mapa .mapa-proyecto .lote{display:block;cursor:pointer;position:relative;}
+#main #plano #mapa .mapa-proyecto .lote .info-item{display:none}
+#main #plano #mapa .mapa-proyecto #lote-1{background:url("../img/lote.png") 0 0 no-repeat;width:120px;height:100px;top:161px;left:268px}
+#main #plano #mapa .mapa-proyecto #lote-2{background:url("../img/lote2.png") 0 0 no-repeat;width:120px;height:112px;top:151px;left:178px}
+#main #plano #mapa .mapa-proyecto #lote-1:hover{background-position:bottom center}
+#main #plano #mapa .mapa-proyecto #lote-2:hover{background-position:0 -126px}
+#main #plano #mapa .details-item{margin:20px auto;text-align:center;}
+#main #plano #mapa .details-item .detail-info{background-color:rgba(0,0,0,0.7);margin-top:20px}
+#main #plano #mapa .details-item .panel{display:inline-block;vertical-align:top;text-align:left;margin-right:10px;}
+#main #plano #mapa .details-item .panel h3{color:#000;font:bold 18px Georgia,serif}
+#main #plano #mapa .details-item .panel ul li{font:italic 14px Georgia,serif}
+#main_footer{position:relative;background:#f9f5f1;height:46px;overflow:hidden;display:block;clear:both;}
+#main_footer #copyright{float:left;margin-left:11px;margin-top:11px;position:relative}
+#main_footer #redes{position:absolute;right:12px;top:9px;font:italic normal 15px Georgia,serif;color:#95897c;}
+#main_footer #redes .label{float:left;padding-right:3px;padding-top:5px}
+#main_footer #redes a{display:inline-block;vertical-align:top;margin-left:5px;background:#000;color:#f9f5f1;text-decoration:none;padding:.5em}
+@media only screen and (max-width:  1030px){#main_header{height:62px;}
+#main_header #logo img{height:62px}
+#main_header #menu ul li a,#main_header #menu ul li span{background-position:7px 26px;padding:23px 7px 17px 24px}
+}@media only screen and (max-width:  760px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#666 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
+#main_header #menu{margin-left:0;top:60px;left:0;width:100%;position:absolute;z-index:20;background:#222;display:none;}
+#main_header #menu ul{padding:0;}
+#main_header #menu ul li{width:100%;float:none;border-bottom:1px solid #666;background-size:13px 12px;}
+#main_header #menu ul li a{padding:5px 5px 3px 30px;background-position:9px 9px}
+#main_header #menu ul li .active{background-color:transparent;color:#fff}
+#main_header .idiomas{display:none}
+#main .franja{height:35px;}
+#main .franja h1{display:none}
+#main .franja span{display:inline;font-size:12px}
+#main #contacto .columna,#main #plano .columna{float:none;}
+#main #contacto .columna .inner,#main #plano .columna .inner{padding:10px}
+#main #contacto .columna h1,#main #plano .columna h1{font-size:38px;line-height:38px;margin:0 0 10px 0}
+#main #contacto .columna .form-item label,#main #plano .columna .form-item label{float:none;margin-right:0;text-align:left}
+#main #contacto .columna .form-item .form-text,#main #plano .columna .form-item .form-text{border:1px solid #b2b1af;float:none;margin-top:5px;padding:5px;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+#main #contacto .columna .form-item textarea,#main #plano .columna .form-item textarea{border:1px solid #b2b1af;float:none;margin-top:5px;padding:5px;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+#main #contacto .columna .buttons,#main #plano .columna .buttons{width:auto}
+#main #contacto .columna .marca,#main #plano .columna .marca{display:none}
+#main #contacto .plan,#main #plano .plan{float:none;}
+#main #contacto .plan .info-top,#main #plano .plan .info-top{height:70px;}
+#main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px;padding-top:1.2em}
+}@media only screen and (max-height:  800px){#main #plano #mapa .details-item .image-item{width:472px;margin:0 auto;}
+#main #plano #mapa .details-item .image-item img{width:100%}
+#main #plano #mapa .details-item .panel ul li{font-size:12px}
+}.mCSB_container{width:auto;margin-right:30px;overflow:hidden}
+.mCSB_container.mCS_no_scrollbar{margin-right:0}
+.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar,.mCS_destroyed>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar{margin-right:30px}
+.mCustomScrollBox>.mCSB_scrollTools{width:10px;height:100%;top:0;right:0}
+.mCSB_scrollTools .mCSB_draggerContainer{position:absolute;top:0;left:0;bottom:0;right:0;height:auto}
+.mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}
+.mCSB_scrollTools .mCSB_draggerRail{width:2px;height:100%;margin:0 auto;}
+.mCSB_scrollTools .mCSB_dragger{cursor:pointer;width:100%;height:30px}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:10px;height:100%;margin:0 auto;text-align:center}
+.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown{display:block;position:relative;height:20px;overflow:hidden;margin:0 auto;cursor:pointer}
+.mCSB_scrollTools .mCSB_buttonDown{top:100%;margin-top:-40px}
+.mCSB_horizontal>.mCSB_container{height:auto;margin-right:0;margin-bottom:30px;overflow:hidden}
+.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar{margin-bottom:0}
+.mCS_disabled>.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar,.mCS_destroyed>.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar{margin-right:0;margin-bottom:30px}
+.mCSB_horizontal.mCustomScrollBox>.mCSB_scrollTools{width:100%;height:16px;top:auto;right:auto;bottom:0;left:0;overflow:hidden}
+.mCSB_horizontal>.mCSB_scrollTools a+.mCSB_draggerContainer{margin:0 20px}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%;height:2px;margin:7px 0;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger{width:30px;height:100%}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_horizontal>.mCSB_scrollTools .mCSB_buttonRight{display:block;position:relative;width:20px;height:100%;overflow:hidden;margin:0 auto;cursor:pointer;float:left}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_buttonRight{margin-left:-40px;float:right}
+.mCustomScrollBox{-ms-touch-action:none;}
+.mCustomScrollBox:hover>.mCSB_scrollTools{opacity:1;filter:"alpha(opacity=100)";-ms-filter:"alpha(opacity=100)";}
+.mCSB_scrollTools .mCSB_draggerRail{background:#000;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#fff;}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:#fff}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:#fff}
+.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight{background-image:url("mCSB_buttons.png");background-repeat:no-repeat}
+.mCSB_scrollTools .mCSB_buttonUp{background-position:0 0;}
+.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -20px;}
+.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -40px;}
+.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -56px;}
+.mCSB_scrollTools .mCSB_buttonUp:hover,.mCSB_scrollTools .mCSB_buttonDown:hover,.mCSB_scrollTools .mCSB_buttonLeft:hover,.mCSB_scrollTools .mCSB_buttonRight:hover{opacity:.75;filter:"alpha(opacity=75)";-ms-filter:"alpha(opacity=75)";}
+.mCSB_scrollTools .mCSB_buttonUp:active,.mCSB_scrollTools .mCSB_buttonDown:active,.mCSB_scrollTools .mCSB_buttonLeft:active,.mCSB_scrollTools .mCSB_buttonRight:active{opacity:.9;filter:"alpha(opacity=90)";-ms-filter:"alpha(opacity=90)";}
+.mCS-dark>.mCSB_scrollTools .mCSB_draggerRail{background:#dfddd0;}
+.mCS-dark>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#cfc8c0;}
+.mCS-dark>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:#b9b0a5}
+.mCS-dark>.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px 0}
+.mCS-dark>.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}
+.mCS-dark>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}
+.mCS-dark>.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}
+.mCS-light-2>.mCSB_scrollTools .mCSB_draggerRail{width:4px;background:#fff;background:rgba(255,255,255,0.1);-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}
+.mCS-light-2>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:4px;background:#fff;background:rgba(255,255,255,0.75);-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}
+.mCS-light-2.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%;height:4px;margin:6px 0}
+.mCS-light-2.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto}
+.mCS-light-2>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:rgba(255,255,255,0.85)}
+.mCS-light-2>.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-light-2>.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:rgba(255,255,255,0.9)}
+.mCS-light-2>.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px 0}
+.mCS-light-2>.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -20px}
+.mCS-light-2>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -40px}
+.mCS-light-2>.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -56px}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_draggerRail{width:4px;background:#000;background:rgba(0,0,0,0.1);-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:4px;background:#000;background:rgba(0,0,0,0.75);-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}
+.mCS-dark-2.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%;height:4px;margin:6px 0}
+.mCS-dark-2.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:rgba(0,0,0,0.85)}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark-2>.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:rgba(0,0,0,0.9)}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px 0}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -20px}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -40px}
+.mCS-dark-2>.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -56px}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_draggerRail{width:4px;background:#fff;background:rgba(255,255,255,0.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px;background:#fff;background:rgba(255,255,255,0.75);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+.mCS-light-thick.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%;height:4px;margin:6px 0}
+.mCS-light-thick.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:6px;margin:5px auto}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:rgba(255,255,255,0.85)}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-light-thick>.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:rgba(255,255,255,0.9)}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px 0}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -20px}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -40px}
+.mCS-light-thick>.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -56px}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_draggerRail{width:4px;background:#000;background:rgba(0,0,0,0.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px;background:#000;background:rgba(0,0,0,0.75);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+.mCS-dark-thick.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%;height:4px;margin:6px 0}
+.mCS-dark-thick.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:6px;margin:5px auto}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:rgba(0,0,0,0.85)}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark-thick>.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:rgba(0,0,0,0.9)}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_buttonUp{background-position:-96px 0}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_buttonDown{background-position:-96px -20px}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-100px -40px}
+.mCS-dark-thick>.mCSB_scrollTools .mCSB_buttonRight{background-position:-100px -56px}
+.mCS-light-thin>.mCSB_scrollTools .mCSB_draggerRail{background:#fff;background:rgba(255,255,255,0.1)}
+.mCS-light-thin>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:2px}
+.mCS-light-thin.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%}
+.mCS-light-thin.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:2px;margin:7px auto}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_draggerRail{background:#000;background:rgba(0,0,0,0.15)}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:2px;background:#000;background:rgba(0,0,0,0.75)}
+.mCS-dark-thin.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{width:100%}
+.mCS-dark-thin.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:100%;height:2px;margin:7px auto}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:rgba(0,0,0,0.85)}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark-thin>.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:rgba(0,0,0,0.9)}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px 0}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}
+.mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}
