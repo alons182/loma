@@ -39,7 +39,7 @@ $(function() {
 
 
     // MENU PROYECTO
-	$('#menu_proyecto a').click(function(){
+	$('#menu_proyecto a.sli').click(function(){
 		//stop_carousel_hp();
 		//tourne_carousel_hp();	
 	
