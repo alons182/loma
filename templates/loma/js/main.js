@@ -148,6 +148,23 @@ $(function() {
         event.preventDefault();
         $("div.overlay-proyecto").fadeToggle("fast");
     });
+
+
+    //SLIDESHOW IMG LOTES
+
+    $('#slideshow').before('<div id="slideshow-nav">').cycle({ 
+        fx:     'fade',
+        //easing: 'easeOutBack',
+        speed:  'fast',
+        prev:   '#prev', 
+        next:   '#next', 
+
+        timeout: 0,
+        slideResize: 0
+        //pager:  '#slideshow-nav'
+
+     });
+
 	
 
 });

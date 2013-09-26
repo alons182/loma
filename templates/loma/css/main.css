@@ -51,9 +51,9 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #contacto .columna .marca,#main #plano .columna .marca{background:url("../img/marca.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
 #main #contacto .columna .marca2,#main #plano .columna .marca2{background:url("../img/marca2.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
 #main #contacto .plan,#main #plano .plan{float:left;}
-#main #contacto .plan .info-top,#main #plano .plan .info-top{background:url("../img/textura_franja.png") 50% 0 repeat;height:85px;color:#fff;}
+#main #contacto .plan .info-top,#main #plano .plan .info-top{background:url("../img/textura_franja.png") 50% 0 repeat;height:50px;color:#fff;}
 #main #contacto .plan .info-top a,#main #plano .plan .info-top a{color:#fff}
-#main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{padding-top:1.5em;padding-left:1em;margin:0;font:italic 20px Georgia,serif}
+#main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{padding-top:.6em;padding-left:1em;margin:0;font:italic 18px Georgia,serif}
 #main #plano p{font:italic normal 18px Georgia,serif}
 #main #plano .info-lotes{background:#fff;padding:1em;width:320px;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
 #main #plano .info-lotes h3{margin-top:0;font:bold 24px Georgia,serif}
@@ -69,6 +69,14 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #plano #mapa .mapa-proyecto #lote-1:hover{background-position:bottom center}
 #main #plano #mapa .mapa-proyecto #lote-2:hover{background-position:0 -126px}
 #main #plano #mapa .details-item{margin:20px auto;text-align:center;}
+#main #plano #mapa .details-item .image-item{position:relative;}
+#main #plano #mapa .details-item .image-item #prev{position:absolute;left:-110px;top:150px;background:url("../img/icono_prev.png") 0 0 no-repeat;display:block;padding:3px 24px;color:#fff;text-decoration:none}
+#main #plano #mapa .details-item .image-item #next{position:absolute;right:-110px;top:150px;background:url("../img/icono_next.png") 0 0 no-repeat;display:block;padding:3px 24px;color:#fff;text-decoration:none}
+#main #plano #mapa .details-item .image-item #slideshow-nav{left:50%;margin-left:-470px;margin-top:389px;position:absolute;text-align:right;width:940px;z-index:50;}
+#main #plano #mapa .details-item .image-item #slideshow-nav a{background:url("../img/heroes-nav.png") no-repeat scroll left top transparent;display:inline-block;height:12px;overflow:hidden;text-indent:999px;width:12px}
+#main #plano #mapa .details-item .image-item #slideshow-nav a.activeSlide{background-position:right top}
+#main #plano #mapa .details-item .image-item #slideshow{height:315px;margin:0 auto;width:100%;}
+#main #plano #mapa .details-item .image-item #slideshow .slide{background-position:center top;background-repeat:no-repeat;height:100%;text-align:center;width:100%}
 #main #plano #mapa .details-item .detail-info{background-color:rgba(0,0,0,0.7);margin-top:20px}
 #main #plano #mapa .details-item .panel{display:inline-block;vertical-align:top;text-align:left;margin-right:10px;}
 #main #plano #mapa .details-item .panel h3{color:#db841e;font:bold 18px Georgia,serif}
@@ -85,7 +93,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main_header #menu{margin-left:0;top:60px;left:0;width:100%;position:absolute;z-index:20;background:#222;display:none;}
 #main_header #menu ul{padding:0;}
 #main_header #menu ul li{width:100%;float:none;border-bottom:1px solid #666;background-size:13px 12px;}
-#main_header #menu ul li a{padding:5px 5px 3px 30px;background-position:9px 9px}
+#main_header #menu ul li a,#main_header #menu ul li span{padding:5px 5px 3px 30px;background-position:9px 9px}
 #main_header #menu ul li .active{background-color:transparent;color:#fff}
 #main_header .idiomas{display:none}
 #main .franja{height:35px;}
@@ -100,8 +108,9 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #contacto .columna .buttons,#main #plano .columna .buttons{width:auto}
 #main #contacto .columna .marca,#main #plano .columna .marca{display:none}
 #main #contacto .plan,#main #plano .plan{float:none;}
-#main #contacto .plan .info-top,#main #plano .plan .info-top{height:70px;}
-#main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px;padding-top:1.2em}
+#main #contacto .plan .info-top,#main #plano .plan .info-top{height:50px;}
+#main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px;padding-top:.6em}
+#main #plano .tuto,#main #plano .marca2{display:none}
 }@media only screen and (max-height:  800px){#main #plano #mapa .details-item .image-item{width:472px;margin:0 auto;}
 #main #plano #mapa .details-item .image-item img{width:100%}
 #main #plano #mapa .details-item .panel ul li{font-size:12px}
