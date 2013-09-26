@@ -68,8 +68,8 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #plano #mapa .mapa-proyecto #lote-2{background:url("../img/lote2.png") 0 0 no-repeat;width:120px;height:112px;top:151px;left:178px}
 #main #plano #mapa .mapa-proyecto #lote-1:hover{background-position:bottom center}
 #main #plano #mapa .mapa-proyecto #lote-2:hover{background-position:0 -126px}
-#main #plano #mapa .details-item{margin:20px auto;text-align:center;}
-#main #plano #mapa .details-item .image-item{position:relative;}
+#main #plano #mapa .details-item{text-align:center;}
+#main #plano #mapa .details-item .image-item{position:relative;width:710px;margin:20px auto;}
 #main #plano #mapa .details-item .image-item #prev{position:absolute;left:-110px;top:150px;background:url("../img/icono_prev.png") 0 0 no-repeat;display:block;padding:3px 24px;color:#fff;text-decoration:none}
 #main #plano #mapa .details-item .image-item #next{position:absolute;right:-110px;top:150px;background:url("../img/icono_next.png") 0 0 no-repeat;display:block;padding:3px 24px;color:#fff;text-decoration:none}
 #main #plano #mapa .details-item .image-item #slideshow-nav{left:50%;margin-left:-470px;margin-top:389px;position:absolute;text-align:right;width:940px;z-index:50;}
@@ -77,7 +77,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #plano #mapa .details-item .image-item #slideshow-nav a.activeSlide{background-position:right top}
 #main #plano #mapa .details-item .image-item #slideshow{height:315px;margin:0 auto;width:100%;}
 #main #plano #mapa .details-item .image-item #slideshow .slide{background-position:center top;background-repeat:no-repeat;height:100%;text-align:center;width:100%}
-#main #plano #mapa .details-item .detail-info{background-color:rgba(0,0,0,0.7);margin-top:20px}
+#main #plano #mapa .details-item .detail-info{background-color:rgba(0,0,0,0.7)}
 #main #plano #mapa .details-item .panel{display:inline-block;vertical-align:top;text-align:left;margin-right:10px;}
 #main #plano #mapa .details-item .panel h3{color:#db841e;font:bold 18px Georgia,serif}
 #main #plano #mapa .details-item .panel ul li{font:italic 14px Georgia,serif}
@@ -111,7 +111,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #contacto .plan .info-top,#main #plano .plan .info-top{height:50px;}
 #main #contacto .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px;padding-top:.6em}
 #main #plano .tuto,#main #plano .marca2{display:none}
-}@media only screen and (max-height:  800px){#main #plano #mapa .details-item .image-item{width:472px;margin:0 auto;}
+}@media only screen and (max-height:  800px){#main #plano #mapa .details-item .image-item{width:472px;}
 #main #plano #mapa .details-item .image-item img{width:100%}
 #main #plano #mapa .details-item .panel ul li{font-size:12px}
 }.mCSB_container{width:auto;margin-right:30px;overflow:hidden}
