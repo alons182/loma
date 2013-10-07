@@ -23,6 +23,14 @@ $(function() {
         }
 
     });
+    // SCROLL PANEL A COLUMNA
+    mapa_scroll = $(".mapa-proyecto").mCustomScrollbar({
+        theme:"dark",
+        scrollButtons:{
+          enable:true
+        }
+
+    });
 
     // NAV MOBILE
     $('#btn_nav').click(function(){
@@ -104,6 +112,7 @@ $(function() {
             $('#main .mapa-proyecto').height(height_dispo - ($('#main .info-top').height())).width(largeur_dispo);
             
             $('.columna').mCustomScrollbar("update");
+            $('.mapa-proyecto').mCustomScrollbar("update");
            
            
         } else {

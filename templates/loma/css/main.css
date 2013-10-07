@@ -36,7 +36,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main .franja .linea{background:#db841e;height:5px;margin:5px 0}
 #main .franja span{display:block;font:italic normal 15px Georgia,serif}
 #main #contacto,#main #plano{zoom:1;}
-#main #contacto .columna,#main #plano .columna{float:left;width:420px;background:#eaece3;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
+#main #contacto .columna,#main #plano .columna{float:left;width:420px;background:#fff;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);position:relative;z-index:1;}
 #main #contacto .columna h1,#main #plano .columna h1{font:normal 40px Georgia,serif;color:#333;margin:30px 0 20px 20px;text-transform:uppercase}
 #main #contacto .columna .inner,#main #plano .columna .inner{padding:20px 0 20px 20px}
 #main #contacto .columna .form-item:after,#main #plano .columna .form-item:after{clear:both}
@@ -59,15 +59,14 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #plano .info-lotes h3{margin-top:0;font:bold 24px Georgia,serif}
 #main #plano .info-lotes span{display:block;font:normal 18px Georgia,serif}
 #main #plano #mapa{position:relative;}
+#main #plano #mapa .contenido-invisible{height:600px}
 #main #plano #mapa .overlay-proyecto{position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.7);z-index:1;color:#fff;display:none;overflow:hidden;}
 #main #plano #mapa .overlay-proyecto .close{color:#fff;text-decoration:none;display:block;background:url("../img/icono_circulo_blanco.png") 3px 3px no-repeat;padding-left:26px;padding-right:5px;padding-bottom:5px;padding-top:5px;float:right;border:1px solid #fff;margin-right:10px;margin-top:10px}
-#main #plano #mapa .mapa-proyecto{background:url("../img/plano.jpg") 0 0 no-repeat;width:100%;height:100%;}
-#main #plano #mapa .mapa-proyecto .lote{display:block;cursor:pointer;position:relative;}
+#main #plano #mapa .mapa-proyecto{background:#fff;width:100%;height:100%;}
+#main #plano #mapa .mapa-proyecto .lote{display:block;cursor:pointer;position:absolute;}
 #main #plano #mapa .mapa-proyecto .lote .info-item{display:none}
-#main #plano #mapa .mapa-proyecto #lote-1{background:url("../img/lote.png") 0 0 no-repeat;width:120px;height:100px;top:161px;left:268px}
-#main #plano #mapa .mapa-proyecto #lote-2{background:url("../img/lote2.png") 0 0 no-repeat;width:120px;height:112px;top:151px;left:178px}
-#main #plano #mapa .mapa-proyecto #lote-1:hover{background-position:bottom center}
-#main #plano #mapa .mapa-proyecto #lote-2:hover{background-position:0 -126px}
+#main #plano #mapa .mapa-proyecto #lote-1{width:120px;height:100px;top:161px;left:268px}
+#main #plano #mapa .mapa-proyecto #lote-2{width:120px;height:112px;top:151px;left:178px}
 #main #plano #mapa .details-item{text-align:center;}
 #main #plano #mapa .details-item .image-item{position:relative;width:710px;margin:20px auto;}
 #main #plano #mapa .details-item .image-item #prev{position:absolute;left:-110px;top:200px;background:url("../img/icono_prev.png") 0 0 no-repeat;display:block;padding:3px 24px;color:#fff;text-decoration:none}
@@ -81,7 +80,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #plano #mapa .details-item .panel{display:inline-block;vertical-align:top;text-align:left;margin-right:10px;}
 #main #plano #mapa .details-item .panel h3{color:#db841e;font:bold 18px Georgia,serif}
 #main #plano #mapa .details-item .panel ul li{font:italic 14px Georgia,serif}
-#main_footer{position:relative;background:#f9f5f1;height:46px;overflow:hidden;display:block;clear:both;}
+#main_footer{position:relative;background:#f9f5f1;height:46px;overflow:hidden;display:block;clear:both;z-index:2;}
 #main_footer #copyright{float:left;margin-left:11px;margin-top:11px;position:relative}
 #main_footer #redes{position:absolute;right:12px;top:9px;font:italic normal 15px Georgia,serif;color:#95897c;}
 #main_footer #redes .label{float:left;padding-right:3px;padding-top:5px}
