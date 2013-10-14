@@ -143,7 +143,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #ubicacion .columna .marca,#main #plano .columna .marca{display:none}
 #main #ubicacion .plan,#main #plano .plan{float:none;}
 #main #ubicacion .plan .info-top,#main #plano .plan .info-top{height:50px;}
-#main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px;padding-top:.6em}
+#main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2{font-size:16px;padding-top:.4em}
 #main #plano .info-lotes{width:295px}
 #main #plano .tuto,#main #plano .marca2{display:none}
 }@media only screen and (max-width: 1366px){#main #plano #mapa .details-item .image-item{width:472px;}
