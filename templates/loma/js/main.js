@@ -130,6 +130,7 @@ $(function() {
            
         } else {
             // mobile            
+            $('#main').height('auto').width('auto');
             $('#main .columna').height('auto').width('auto');
             $('#main .plan').width('100%');
             $('#main .map').height('250px').width('100%');
