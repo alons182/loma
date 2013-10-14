@@ -16,11 +16,32 @@ $(function() {
     $menu.find('.menu > .item-110 > span').prepend('<span class="icon-cog"></span>');
     $menu.find('.menu > .item-111 > span').prepend('<span class="icon-phone"></span>');
 
+    $menu.find('.menu > .item-112 > span').prepend('<span class="icon-user"></span>');
+    $menu.find('.menu > .item-113 > span').prepend('<span class="icon-stack"></span>');
+    $menu.find('.menu > .item-114 > span').prepend('<span class="icon-images"></span>');
+    $menu.find('.menu > .item-115 > span').prepend('<span class="icon-cog"></span>');
+    $menu.find('.menu > .item-116 > span').prepend('<span class="icon-phone"></span>');
+
     $menu.find('.menu > .item-107 > a').prepend('<span class="icon-user"></span>');
     $menu.find('.menu > .item-108 > a').prepend('<span class="icon-stack"></span>');
     $menu.find('.menu > .item-109 > a').prepend('<span class="icon-images"></span>');
     $menu.find('.menu > .item-110 > a').prepend('<span class="icon-cog"></span>');
     $menu.find('.menu > .item-111 > a').prepend('<span class="icon-phone"></span>');
+
+    $menu.find('.menu > .item-112 > a').prepend('<span class="icon-user"></span>');
+    $menu.find('.menu > .item-113 > a').prepend('<span class="icon-stack"></span>');
+    $menu.find('.menu > .item-114 > a').prepend('<span class="icon-images"></span>');
+    $menu.find('.menu > .item-115 > a').prepend('<span class="icon-cog"></span>');
+    $menu.find('.menu > .item-116 > a').prepend('<span class="icon-phone"></span>');
+
+     $menu.find('.menu .item-116 span').on('click',function(){
+       
+        if($("#contactbox #dialog").css("display")=="none") 
+            {
+                $('.window').fadeOut(200);//hide();
+                $('#contactbox #dialog').fadeIn(200)//show();
+            }
+    });
 
     $menu.find('.menu .item-111 span').on('click',function(){
        
