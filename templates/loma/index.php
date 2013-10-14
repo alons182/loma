@@ -52,6 +52,11 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
             <div class="idiomas">
                 <jdoc:include type="modules" name="idiomas" style="none" />
             </div>
+            <div id="contactbox">
+                <div id="dialog" class="window">
+                    <jdoc:include type="modules" name="contact-box" style="none" />
+                </div>
+            </div>
         </header>
         <div id="main">
             <?php if ($this->countModules('menu_proyecto')) : ?>

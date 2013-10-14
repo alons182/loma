@@ -127,6 +127,132 @@ body
 			padding-bottom 5px
 			padding-top 3px
 
+	#contactbox
+
+		.column1, .column2
+			display inline-block
+			vertical-align top
+			width 45%
+		.column1
+			margin-right 40px
+		h1
+			font normal 35px  Georgia,serif
+			color #333
+			margin 30px 0 20px 20px
+			text-transform uppercase
+
+		.form-item:after 
+				clear both
+			.form-item:before, .form-item:after 
+				content ""
+				display table
+			.form-item
+				margin-top 5px
+				zoom: 1
+			
+			
+				
+				
+				label
+					font normal 14px Georgia,serif
+					color #333
+					width 70px
+					float left
+					display block
+					text-align right
+					margin-right 10px
+					padding-top 10px
+
+				.form-text
+					border-top none
+					border-left none
+					border-right none
+					border-bottom 1px solid #b2b1af
+					padding 10px 0 8px 0
+					font normal 15px Georgia,serif
+					color #999
+					background none
+					width 200px
+					display block
+					float left
+				.form-text:hover, .form-text:focus, textarea:hover, textarea:focus
+					background #f9f5f1
+					border-color #dd841d
+				textarea
+					border-top none
+					border-left none
+					border-right none
+					border-bottom 1px solid #b2b1af
+					padding 10px 0 8px 0
+					font normal 15px Georgia,serif
+					color #999
+					background none
+					width 200px
+					height 100px
+					display block
+					float left
+					resize none
+
+			.buttons
+				width 290px
+				margin-top 10px
+
+				button,input[type="submit"]
+					background url('../img/icono_circulo_blanco.png') 10px 10px no-repeat  $naranja
+					border none
+					clear both
+					color white
+					cursor pointer
+					float right
+					font-size 12px
+					height 40px
+					margin-right 4px
+					width 117px
+					text-transform uppercas
+
+		
+
+		.mensaje
+				
+			span
+				border-radius 5px
+				padding 0.5em
+				width 85%
+			.ok
+				background #dff0d8
+				border 1px solid #d6e9c6
+			.error
+				background #f2dede
+				border 1px solid #eed3d7
+
+		#dialog
+			border-bottom 5px solid $lima
+			left 300px
+			width 300px
+
+
+			h1
+				color $lima
+
+			.close
+				background $naranja
+
+		.window
+			background white
+			display none
+			padding 20px
+			position fixed
+			top 73px
+			z-index 9999
+
+			.close
+				color white
+				padding 24px 6px 6px 6px
+				position absolute
+				right 10px
+				text-decoration none
+				top 0px
+
 #main 
 	position relative
 

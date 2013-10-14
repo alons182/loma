@@ -9,6 +9,7 @@ $(function() {
 	
     //ICONOS EN EL MENU JOOMLA
     $menu = $('#menu');
+    $dialog = $('.window')
     $menu.find('.menu > .item-107 > span').prepend('<span class="icon-user"></span>');
     $menu.find('.menu > .item-108 > span').prepend('<span class="icon-stack"></span>');
     $menu.find('.menu > .item-109 > span').prepend('<span class="icon-images"></span>');
@@ -20,6 +21,46 @@ $(function() {
     $menu.find('.menu > .item-109 > a').prepend('<span class="icon-images"></span>');
     $menu.find('.menu > .item-110 > a').prepend('<span class="icon-cog"></span>');
     $menu.find('.menu > .item-111 > a').prepend('<span class="icon-phone"></span>');
+
+    $menu.find('.menu .item-111 span').on('click',function(){
+       
+        if($("#contactbox #dialog").css("display")=="none") 
+            {
+                $('.window').fadeOut(200);//hide();
+                $('#contactbox #dialog').fadeIn(200)//show();
+            }
+    });
+
+    $dialog.find('.close').on('click',function(e){
+                    
+         e.preventDefault();
+            
+
+        $dialog.fadeOut(200)//hide();
+       
+        limpiaForm($('#contactForm'));
+        
+    });
+    
+    // FUNCION LIMPIAR FORM
+     function limpiaForm(miForm) {
+        
+         // recorremos todos los campos que tiene el formulario
+         $(":input", miForm).each(function() {
+         var type = this.type;
+         var tag = this.tagName.toLowerCase();
+         //limpiamos los valores de los campos…
+        if (type == 'text' || type == 'password'  || type == 'email' || tag == 'textarea')
+        this.value = "";
+         // excepto de los checkboxes y radios, le quitamos el checked
+         // pero su valor no debe ser cambiado
+         else if (type == 'checkbox' || type == 'radio')
+        this.checked = false;
+         // los selects le ponesmos el indice a -
+         else if (tag == 'select')
+        this.selectedIndex = -1;
+         });
+    }
 	// EFFECTO FRANJA HOME
 	$('.franja').hide();
 	$('.franja').slideDown(600);
