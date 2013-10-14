@@ -8,8 +8,11 @@
 			ul 
 				li 
 					a, span 				
-						background-position 7px 26px
-						padding 23px 7px 17px 24px
+						padding-bottom 16px
+						padding-top 20px
+
+						.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
+							top -5px
 						
 
 @media only screen and (max-width:  760px)
@@ -43,17 +46,52 @@
 					border-bottom 1px solid #666
 					background-size 13px 12px
 
+
 					a, span 
 						padding 5px 5px 3px 30px
-						background-position 9px 9px
-					.active
-						background-color transparent
-						color #fff
+						background none
+						color #FFF
+						width auto
+
+						.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
+							font-size 1em
+							top 0
+							left -24px
+
+
+					span:hover, a:hover
+						width auto
+
+				.active a, .active span
+					width auto
+					color $naranja
 						
 		.idiomas
 			display none
 
 	#main
+		#menu_proyecto
+			ul
+				li 
+
+					a
+						
+						font-size 18px 
+						padding .5em
+						
+
+						span 
+							
+							font-size 12px 
+							
+					/*a:hover
+						background $naranja
+						background-image -webkit-linear-gradient(top, #fb9114, #c1700b)
+						background-image -o-linear-gradient(top, #fb9114, #c1700b)
+						background-image linear-gradient(to bottom, #fb9114, #c1700b)
+						color #fff
+						text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)*/
+
 		.franja
 			height 35px
 
@@ -63,7 +101,7 @@
 				display inline
 				font-size 12px
 
-		#contacto, #plano
+		#ubicacion, #plano
 			.columna
 				float none
 

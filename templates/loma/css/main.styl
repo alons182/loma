@@ -64,23 +64,56 @@ body
 			li 
 				display inline-block
 				vertical-align top
+				
+			
+			li > span, li > a
+				text-decoration none
+				color hsla( 0, 0%, 100%, 0)
+				display block
+				position relative
+				padding-left 73px
+				padding-top 28px
+				padding-bottom 26px
+				background-repeat: no-repeat
+				-webkit-transition-property width color
+				-moz-transition-property width color
+				-ms-transition-property width color
+				-o-transition-property width color
+				transition-property width color
+				-webkit-transition-duration 0.5s
+				-moz-transition-duration 0.5s
+				-ms-transition-duration 0.5s
+				-o-transition-duration 0.5s
+				transition-duration 0.5s
+				cursor pointer
+				width 0
+				overflow hidden
 
-				a, span 
+
+				.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
+					font-size 2em
 					display block
-					background url('../img/icono_nav.png') 15px 31px no-repeat
-					background-size 13px 12px
-					padding 28px 15px 22px 35px
-					height 22px
-					outline none
-					position relative
-					text-decoration none
-				a:hover, span:hover
-					background-image url('../img/icono_nav_naranja.png')
+					width 32px
+					height 32px
+					position absolute
+					left 31px
+					top 22px
+					opacity 1
+					color #FFF
+			
+			li > span:hover, li > a:hover
+				opacity 1
+				color $naranja
+				width 150px
+				
 				
 			.active a, .active span
-				background-image url('../img/icono_nav_naranja.png')
+				width 150px
 				background-color #fff
 				color #000
+
+				.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
+					color $naranja
 
 	.idiomas
 		position absolute
@@ -147,12 +180,12 @@ body
 			position relative
 		.cir_banner
 			position absolute
-			top 10%
-			left 53%
+			top 5%
+			left 75%
 			background url('../img/cir_banner.png') right 0 no-repeat
-			width 262px
-			height 214px
-			padding 70px 60px 90px 58px
+			width 185px
+			height 170px
+			padding 40px 20px 30px 22px
 			color #fff
 			text-align center
 			text-decoration none
@@ -160,13 +193,13 @@ body
 			span
 				display block
 			.h2
-				font italic bold 36px/36px Georgia,serif
+				font italic bold 26px/26px Georgia,serif
 				text-transform uppercase
 				border-bottom 1px dotted #fff
 				padding-bottom 9px
 				margin 14px 0 9px 0
 			.p 
-				font normal 1.7em Georgia,serif
+				font normal 1.2em Georgia,serif
 				margin 0
 
 	.franja
@@ -182,7 +215,7 @@ body
 
 		h1
 			
-			font normal 75px Georgia,serif
+			font normal 55px Georgia,serif
 			text-transform uppercase
 			margin 0
 			padding-top 15px
@@ -195,7 +228,7 @@ body
 			display block
 			font italic normal 15px Georgia,serif
 
-	#contacto, #plano
+	#ubicacion, #plano
 		zoom: 1
 
 		.columna
@@ -212,6 +245,9 @@ body
 				color #333
 				margin 30px 0 20px 20px
 				text-transform uppercase
+
+			p, ul li 
+				line-height 20px
 
 			.inner 
 				padding 20px 0 20px 20px

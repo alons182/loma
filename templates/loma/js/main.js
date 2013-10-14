@@ -7,6 +7,19 @@ $(function() {
     $(window).scroll(resizes);     // calcula au défilement de la page
     $(window).resize(resizes);     // calcul au redimensionnement de la page
 	
+    //ICONOS EN EL MENU JOOMLA
+    $menu = $('#menu');
+    $menu.find('.menu > .item-107 > span').prepend('<span class="icon-user"></span>');
+    $menu.find('.menu > .item-108 > span').prepend('<span class="icon-stack"></span>');
+    $menu.find('.menu > .item-109 > span').prepend('<span class="icon-images"></span>');
+    $menu.find('.menu > .item-110 > span').prepend('<span class="icon-cog"></span>');
+    $menu.find('.menu > .item-111 > span').prepend('<span class="icon-phone"></span>');
+
+    $menu.find('.menu > .item-107 > a').prepend('<span class="icon-user"></span>');
+    $menu.find('.menu > .item-108 > a').prepend('<span class="icon-stack"></span>');
+    $menu.find('.menu > .item-109 > a').prepend('<span class="icon-images"></span>');
+    $menu.find('.menu > .item-110 > a').prepend('<span class="icon-cog"></span>');
+    $menu.find('.menu > .item-111 > a').prepend('<span class="icon-phone"></span>');
 	// EFFECTO FRANJA HOME
 	$('.franja').hide();
 	$('.franja').slideDown(600);
@@ -51,7 +64,7 @@ $(function() {
 			opacity:0
 		}, 0);
 		$('.cir_banner').animate({
-			left:'53%',
+			left:'75%',
 			opacity:1		
 		}, 800);
 		
@@ -74,7 +87,7 @@ $(function() {
             height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('.item-page').height()) - ($('#main_footer').height());
             width_dispo = getWindowWidth() - getScrollerWidth();
 
-            //$('#main').height(height_dispo).width(width_dispo);
+            $('#main').height(height_dispo).width(width_dispo);
             $('#slider .slide').height(height_dispo).width(width_dispo);
 
             ratio_dispo = width_dispo / height_dispo;

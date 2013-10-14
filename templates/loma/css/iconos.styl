@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-twitter, .icon-facebook {
+.icon-facebook, .icon-twitter, .icon-user, .icon-stack, .icon-images, .icon-cog, .icon-phone {
 	font-family: 'loma';
 	speak: none;
 	font-style: normal;
@@ -38,10 +38,24 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-twitter:before {
-	content: "\e003";
-}
 .icon-facebook:before {
 	content: "\e004";
 }
-
+.icon-twitter:before {
+	content: "\e003";
+}
+.icon-user:before {
+	content: "\e000";
+}
+.icon-stack:before {
+	content: "\e001";
+}
+.icon-images:before {
+	content: "\e002";
+}
+.icon-cog:before {
+	content: "\e006";
+}
+.icon-phone:before {
+	content: "\e005";
+}
