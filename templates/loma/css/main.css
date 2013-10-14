@@ -79,9 +79,9 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #ubicacion .columna .marca,#main #plano .columna .marca{background:url("../img/marca.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
 #main #ubicacion .columna .marca2,#main #plano .columna .marca2{background:url("../img/marca2.png") center center no-repeat;color:#fff;font:italic normal 12px Georgia,serif;width:290px;height:235px;padding:0 45px;margin-top:20px}
 #main #ubicacion .plan,#main #plano .plan{float:left;}
-#main #ubicacion .plan .info-top,#main #plano .plan .info-top{background:url("../img/textura_franja.png") 50% 0 repeat;height:50px;color:#fff;}
+#main #ubicacion .plan .info-top,#main #plano .plan .info-top{background:url("../img/textura_franja.png") 50% 0 repeat;color:#fff;}
 #main #ubicacion .plan .info-top a,#main #plano .plan .info-top a{color:#fff}
-#main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2{padding-top:.6em;padding-left:1em;margin:0;font:italic 18px Georgia,serif}
+#main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2{padding:.6em;margin:0;font:italic 18px Georgia,serif}
 #main #plano p{font:italic normal 18px Georgia,serif}
 #main #plano .info-lotes{background:#fff;padding:1em;width:320px;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
 #main #plano .info-lotes h3{margin-top:0;font:bold 24px Georgia,serif}
@@ -143,7 +143,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main #ubicacion .columna .marca,#main #plano .columna .marca{display:none}
 #main #ubicacion .plan,#main #plano .plan{float:none;}
 #main #ubicacion .plan .info-top,#main #plano .plan .info-top{height:auto;}
-#main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px;padding-top:.6em}
+#main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2{font-size:18px}
 #main #plano .info-lotes{width:295px}
 #main #plano .tuto,#main #plano .marca2{display:none}
 }@media only screen and (max-width: 1366px){#main #plano #mapa .details-item .image-item{width:472px;}
