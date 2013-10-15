@@ -161,7 +161,7 @@ $(function() {
                 largeur_dispo = getWindowWidth() - ($('#main .columna').width()) - getScrollerWidth();
         }
 
-        if(getWindowWidth() > 760){
+        if(getWindowWidth() > 768){
             // desktop
             $('#main .columna').height(height_dispo).width('420px');
             $('#main .plan').width(largeur_dispo);
@@ -174,7 +174,7 @@ $(function() {
            
         } else {
             // mobile            
-            $('#main').height('auto').width('auto');
+            $('#main').height('auto');
             $('#main .columna').height('auto').width('auto');
             $('#main .plan').width('100%');
             $('#main .map').height('250px').width('100%');
