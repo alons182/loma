@@ -211,7 +211,7 @@ $(function() {
 
     });
 
-    $(".close").on('click',function(e){
+    $("#mapa .close").on('click',function(e){
         event.preventDefault();
         $("div.overlay-proyecto").fadeToggle("fast");
     });
