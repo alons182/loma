@@ -33,14 +33,15 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main_header #contactbox .form-item:before,#main_header #contactbox .form-item:after{content:"";display:table}
 #main_header #contactbox .form-item{margin-top:5px;zoom:1;}
 #main_header #contactbox .form-item label{font:normal 14px Georgia,serif;color:#333;width:70px;float:left;display:block;text-align:right;margin-right:10px;padding-top:10px}
+#main_header #contactbox .form-item .error{color:#f00;float:right}
 #main_header #contactbox .form-item .form-text{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font:normal 15px Georgia,serif;color:#999;background:none;width:200px;display:block;float:left}
 #main_header #contactbox .form-item .form-text:hover,#main_header #contactbox .form-item .form-text:focus,#main_header #contactbox .form-item textarea:hover,#main_header #contactbox .form-item textarea:focus{background:#f9f5f1;border-color:#dd841d}
 #main_header #contactbox .form-item textarea{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font:normal 15px Georgia,serif;color:#999;background:none;width:200px;height:47px;display:block;float:left;resize:none}
 #main_header #contactbox .buttons{width:290px;margin-top:10px;}
 #main_header #contactbox .buttons button,#main_header #contactbox .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #db841e;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercas}
 #main_header #contactbox .mensaje span{border-radius:5px;padding:.5em;width:85%}
-#main_header #contactbox .mensaje .ok{background:#dff0d8;border:1px solid #d6e9c6}
-#main_header #contactbox .mensaje .error{background:#f2dede;border:1px solid #eed3d7}
+#main_header #contactbox .mensaje .ok{background:#33520e;border:1px solid #d6e9c6}
+#main_header #contactbox .mensaje .error{background:#f00;border:1px solid #eed3d7}
 #main_header #contactbox #dialog{border-bottom:5px solid $lima;left:520px;width:300px;}
 #main_header #contactbox #dialog h1{color:$lima}
 #main_header #contactbox #dialog .close{background:#33520e}

@@ -62,6 +62,61 @@ $(function() {
         limpiaForm($('#contactForm'));
         
     });
+
+    //FORM SUBMIT CONTACT
+    
+     $("#contactForm").validate({
+
+        messages:
+        {
+            name:{
+                required:'*'
+            },
+            email:{
+                required:'*',
+                email:'Invalid'
+            },
+            comments:{
+                required:'*'
+            }
+            
+        },
+        rules: {
+            
+            comments:{
+                required: true
+            }
+
+          },
+
+          submitHandler: function(form) {
+
+            var formInput =  $('#contactForm').serializeArray();
+            var url = "/helpers/contact.php";
+        
+            $.post(url, formInput, function(data){
+                        console.log(data);
+                        limpiaForm($("#contactForm"));
+
+                        if(data=="ok")
+                            $('.mensaje').html('<span class="ok">Enviado</span>');
+                        else
+                            $('.mensaje').html('<span class="error">Error</span>');
+
+
+                        setTimeout(function(){  
+                            $('.mensaje').fadeOut(200,function() {
+
+                                $('.mensaje span').remove();
+                                $('.mensaje').show();
+                                
+                              });}, 2000);  
+                    });
+           // form.submit();
+
+          }
+
+         });
     
     
 	// EFFECTO FRANJA HOME
