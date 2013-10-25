@@ -216,7 +216,7 @@ $(function() {
                 largeur_dispo = getWindowWidth() - ($('#main .columna').width()) - getScrollerWidth();
         }
 
-        if(getWindowWidth() > 768){
+        if(getWindowWidth() > 800){
             // desktop
             $('#main .columna').height(height_dispo).width('420px');
             $('#main .plan').width(largeur_dispo);
