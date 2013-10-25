@@ -118,7 +118,7 @@ body{background:#f0efed;color:#333;font:normal 14px arial,sans-serif;height:100%
 #main_header #logo img{height:62px}
 #main_header #menu ul li a,#main_header #menu ul li span{padding-bottom:16px;padding-top:20px;}
 #main_header #menu ul li a .icon-stack,#main_header #menu ul li span .icon-stack,#main_header #menu ul li a .icon-user,#main_header #menu ul li span .icon-user,#main_header #menu ul li a .icon-images,#main_header #menu ul li span .icon-images,#main_header #menu ul li a .icon-cog,#main_header #menu ul li span .icon-cog,#main_header #menu ul li a .icon-phone,#main_header #menu ul li span .icon-phone{top:-5px}
-}@media only screen and (max-width:  768px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#666 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
+}@media only screen and (max-width:  800px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#666 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
 #main_header #menu{margin-left:0;top:60px;left:0;width:100%;position:absolute;z-index:20;background:#222;display:none;}
 #main_header #menu ul{padding:0;}
 #main_header #menu ul li{width:100%;float:none;border-bottom:1px solid #666;background-size:13px 12px;}
