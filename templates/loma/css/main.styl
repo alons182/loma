@@ -341,12 +341,9 @@ img.ac_bgimage
 			li 
 				
 				//border-bottom 1px solid #d7d1c4 
-				border-radius 10px
+				
 				margin-bottom 1em
-				background #f9f5f1
-				-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-				-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-				box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+				
 
 				a
 					display block
@@ -359,6 +356,11 @@ img.ac_bgimage
 					color #000
 					text-decoration none
 					cursor pointer
+					background #f9f5f1
+					border-radius 10px
+					-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+					-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+					box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 
 					span 
 						display block
@@ -367,15 +369,15 @@ img.ac_bgimage
 						//font-style italic
 						font-weight normal
 						text-transform none
-			li:hover
-				background $naranja
-				background-image -webkit-linear-gradient(top, #fb9114, #c1700b)
-				background-image -o-linear-gradient(top, #fb9114, #c1700b)
-				background-image linear-gradient(to bottom, #fb9114, #c1700b)
-				
-				a 
+				a:hover, a.on
+					background $naranja
+					background-image -webkit-linear-gradient(top, #fb9114, #c1700b)
+					background-image -o-linear-gradient(top, #fb9114, #c1700b)
+					background-image linear-gradient(to bottom, #fb9114, #c1700b)
 					color #fff
 					text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)
+				
+					
 					
 					
 

@@ -58,11 +58,10 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main{position:relative;}
 #main #menu_proyecto{position:absolute;top:122px;left:40px;z-index:1;}
 #main #menu_proyecto ul{margin:0;padding:0;}
-#main #menu_proyecto ul li{border-radius:10px;margin-bottom:1em;background:#f9f5f1;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
-#main #menu_proyecto ul li a{display:block;text-transform:uppercase;font-family:'neogothis_adf_stdbold',sans-serif;font-size:18px;text-align:center;padding:.5em;color:#000;text-decoration:none;cursor:pointer;}
+#main #menu_proyecto ul li{margin-bottom:1em;}
+#main #menu_proyecto ul li a{display:block;text-transform:uppercase;font-family:'neogothis_adf_stdbold',sans-serif;font-size:18px;text-align:center;padding:.5em;color:#000;text-decoration:none;cursor:pointer;background:#f9f5f1;border-radius:10px;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
 #main #menu_proyecto ul li a span{display:block;font-size:14px;font-family:'Muli',sans-serif;font-weight:normal;text-transform:none}
-#main #menu_proyecto ul li:hover{background:#dd8704;background-image:-webkit-linear-gradient(top,#fb9114,#c1700b);background-image:-o-linear-gradient(top,#fb9114,#c1700b);background-image:linear-gradient(to bottom,#fb9114,#c1700b);}
-#main #menu_proyecto ul li:hover a{color:#fff;text-shadow:0 2px 0 rgba(0,0,0,0.5)}
+#main #menu_proyecto ul li a:hover,#main #menu_proyecto ul li a.on{background:#dd8704;background-image:-webkit-linear-gradient(top,#fb9114,#c1700b);background-image:-o-linear-gradient(top,#fb9114,#c1700b);background-image:linear-gradient(to bottom,#fb9114,#c1700b);color:#fff;text-shadow:0 2px 0 rgba(0,0,0,0.5)}
 #main #slider .slide{overflow:hidden;position:relative}
 #main #slider .cir_banner{position:fixed;top:15%;left:75%;background:url("../img/cir_banner.png") right 0 no-repeat;width:185px;height:170px;padding:35px 20px 30px 22px;color:#fff;text-align:center;text-decoration:none;z-index:20;}
 #main #slider .cir_banner span{display:block}
