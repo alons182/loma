@@ -4,10 +4,20 @@
 
 
 
-$naranja = #db841e
+$naranja = #dd8704
 $gris = #bbc0ac
-$verde = #33520e
+$verde = #435820
 $cafe = #736841
+$amarillo = #f6ef95
+
+.orange
+	background $naranja
+.brown
+	background $cafe	
+.green
+	background $verde
+.yellow
+	background $amarillo
 
 *:focus
 	outline 0
@@ -28,7 +38,8 @@ $cafe = #736841
 body
 	background #f0efed
 	color #333
-	font normal 14px arial, sans-serif
+	font-family: 'Muli', sans-serif;
+	font-size 14px
 	height 100%
 	margin 0
 	overflow-y scroll
@@ -36,7 +47,8 @@ body
 	position relative
 
 #main_header
-	background #222
+	background rgba(53,86,15,0.8)
+	opacity 1
 	color #fff
 	display block
 	height 72px
@@ -47,13 +59,22 @@ body
 
 	#logo
 		position absolute
+		padding 1em
+		z-index 2
 		top 0
-		left 0
+		left 20px
+		background rgba(255,255,255,0.8)
+		-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+		-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+		box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 	#btn_nav
 		display none
 	#menu
-		margin-left 130px
-		font italic normal 15px Georgia,serif
+		margin-left 265px
+		padding-top 5px
+		font-family 'neogothis_adf_stdregular', sans-serif
+		font-size 15px 
+		//font-weight light
 		display block
 
 		ul 
@@ -64,9 +85,32 @@ body
 			li 
 				display inline-block
 				vertical-align top
+				margin-right 2em
 				
+				span.icon
+					display block
+					font-size 2em
+					margin-bottom .2em
+					opacity .5
+					text-align center
+
+				span, a 
+					color #fff
+					display block
+					font-size 12px
+					text-decoration none
+					cursor pointer
+
+				.border-item
+					display none
+					height 5px
+					margin 5px auto 0
+					width 100%
+			li:hover .border-item
+				display block
 			
-			li > span, li > a
+			
+				/*li > span, li > a
 				text-decoration none
 				color hsla( 0, 0%, 100%, 0)
 				display block
@@ -86,11 +130,10 @@ body
 				-o-transition-duration 0.5s
 				transition-duration 0.5s
 				cursor pointer
-				width 0
-				overflow hidden
+				width 95px
+				overflow hidden*/
 
-
-				.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
+				/*.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
 					font-size 2em
 					display block
 					width 32px
@@ -99,27 +142,26 @@ body
 					left 31px
 					top 22px
 					opacity 1
-					color #FFF
+					color #FFF*/
 			
-			li > span:hover, li > a:hover
+			/*li > span:hover, li > a:hover
 				opacity 1
 				color $naranja
-				width 150px
+				//width 150px
+				*/
 				
-				
-			.active a, .active span
-				width 150px
-				background-color #fff
-				color #000
+			.active .border-item, .active .border-item
+				display block
 
-				.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
-					color $naranja
+				/*.icon-stack,.icon-user,.icon-images,.icon-cog,.icon-phone
+					color $naranja*/
 
 	.idiomas
 		position absolute
 		right 20px
 		top 30px
-		font normal 12px Georgia,serif
+		font-size 12px
+		//font normal 12px Georgia,serif
 
 		a 
 			background url('../img/icono_circulo_blanco.png') 0 0 no-repeat
@@ -137,7 +179,10 @@ body
 			margin-right 40px
 		h1
 			
-			font normal 35px  Georgia,serif
+			//font normal 35px  Georgia,serif
+			font-family: 'neogothis_adf_stdregular', sans-serif;
+			font-size 35px
+
 			color $verde
 			margin 30px 0 20px 20px
 			text-transform uppercase
@@ -155,7 +200,7 @@ body
 				
 				
 				label
-					font normal 14px Georgia,serif
+					font-size 14px
 					color #333
 					width 70px
 					float left
@@ -173,7 +218,7 @@ body
 					border-right none
 					border-bottom 1px solid #b2b1af
 					padding 10px 0 8px 0
-					font normal 15px Georgia,serif
+					font-size 15px
 					color #999
 					background none
 					width 200px
@@ -188,7 +233,7 @@ body
 					border-right none
 					border-bottom 1px solid #b2b1af
 					padding 10px 0 8px 0
-					font normal 15px Georgia,serif
+					font-size 15px
 					color #999
 					background none
 					width 200px
@@ -265,12 +310,11 @@ body
 
 	#menu_proyecto
 		position absolute
-		top 0px
+		top 122px
+		left 40px
 		z-index 1
-		background #f9f5f1
-		-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+		
+		
 
 		ul
 			margin 0
@@ -278,14 +322,22 @@ body
 
 			li 
 				
-				border-bottom 1px solid #d7d1c4 
+				//border-bottom 1px solid #d7d1c4 
+				border-radius 10px
+				margin-bottom 1em
+				background #f9f5f1
+				-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+				-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+				box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 
 				a
 					display block
 					text-transform uppercase
-					font bold 24px Georgia,serif
+					font-family 'neogothis_adf_stdbold', sans-serif// 'neogothis_adf_stdbold', sans-serif
+					font-size 18px
+					//font-weight bold
 					text-align center
-					padding 1em
+					padding .5em
 					color #000
 					text-decoration none
 					cursor pointer
@@ -293,13 +345,17 @@ body
 					span 
 						display block
 						font-size 14px 
-						font-style italic
+						font-family 'Muli', sans-serif
+						//font-style italic
 						font-weight normal
-				a:hover
-					background $naranja
-					background-image -webkit-linear-gradient(top, #fb9114, #c1700b)
-					background-image -o-linear-gradient(top, #fb9114, #c1700b)
-					background-image linear-gradient(to bottom, #fb9114, #c1700b)
+						text-transform none
+			li:hover
+				background $naranja
+				background-image -webkit-linear-gradient(top, #fb9114, #c1700b)
+				background-image -o-linear-gradient(top, #fb9114, #c1700b)
+				background-image linear-gradient(to bottom, #fb9114, #c1700b)
+				
+				a 
 					color #fff
 					text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)
 					
@@ -318,7 +374,7 @@ body
 			background url('../img/cir_banner.png') right 0 no-repeat
 			width 185px
 			height 170px
-			padding 40px 20px 30px 22px
+			padding 35px 20px 30px 22px
 			color #fff
 			text-align center
 			text-decoration none
@@ -326,14 +382,22 @@ body
 			span
 				display block
 			.h2
-				font italic bold 26px/26px Georgia,serif
-				text-transform uppercase
+				font-family 'neogothis_adf_stdregular', sans-serif
+				font-size 20px
+				color $verde
 				border-bottom 1px dotted #fff
 				padding-bottom 9px
 				margin 14px 0 9px 0
+			.h3
+				font-family 'Muli', sans-serif
+				text-transform uppercase
+				color $amarillo
 			.p 
-				font normal 1.2em Georgia,serif
+				font-family 'neogothis_adf_stdbold', sans-serif
+				font-size 3em
 				margin 0
+				text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)
+
 
 	.franja
 		display block
@@ -373,11 +437,13 @@ body
 			box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			position relative
 			z-index 1
+			//padding-top 75px
 			h1
-				font normal 40px  Georgia,serif
+				font-family 'neogothis_adf_stdregular', sans-serif
+				font-size 50px
 				color #333
-				margin 30px 0 20px 20px
-				text-transform uppercase
+				margin 110px 0 20px 20px
+				//text-transform uppercase
 
 			p, ul li 
 				line-height 20px
@@ -398,7 +464,8 @@ body
 				
 				
 				label
-					font normal 14px Georgia,serif
+					//font normal 14px Georgia,serif
+					font-size 14px
 					color #333
 					width 130px
 					float left
@@ -413,7 +480,8 @@ body
 					border-right none
 					border-bottom 1px solid #b2b1af
 					padding 10px 0 8px 0
-					font normal 15px Georgia,serif
+					//font normal 15px Georgia,serif
+					font-size 15px
 					color #999
 					background none
 					width 220px
@@ -428,7 +496,8 @@ body
 					border-right none
 					border-bottom 1px solid #b2b1af
 					padding 10px 0 8px 0
-					font normal 15px Georgia,serif
+					//font normal 15px Georgia,serif
+					font-size 15px
 					color #999
 					background none
 					width 220px
@@ -489,10 +558,12 @@ body
 					padding 0.6em
 					//padding-left 1em
 					margin 0
-					font italic 18px Georgia,serif
+					font-family 'neogothis_adf_stdlight', sans-serif
+					font-size 18px
 	#plano
 		p 
-			font italic normal 18px Georgia,serif
+			font-family 'Muli', sans-serif
+			font-size 18px
 
 		.info-lotes
 			background #fff
@@ -504,10 +575,12 @@ body
 
 			h3
 				margin-top 0
-				font bold 24px Georgia,serif
+				font-family 'Muli', sans-serif
+				font-size 24px
 			span
 				display block
-				font normal 18px Georgia,serif
+				font-family 'Muli', sans-serif
+				font-size 18px
 		#mapa 
 			position relative
 
@@ -649,16 +722,19 @@ body
 
 					h3 
 						color $naranja
-						font bold 18px Georgia,serif
+						font-family 'neogothis_adf_stdregular', sans-serif
+						font-size 18px
 					ul li
-						font italic 14px Georgia,serif
+						font-family 'neogothis_adf_stdregular', sans-serif
+						font-size 14px
 				
 		
 
 
 #main_footer 
 	position relative
-	background #f9f5f1
+	background rgba(129, 112, 59, 1)
+
 	height 46px
 	overflow hidden
 	display block
@@ -670,12 +746,15 @@ body
 		margin-left 11px
 		margin-top 11px
 		position relative
+		color #fff
+		font-family 'neogothis_adf_stdlight', sans-serif
 	#redes
 		position absolute
 		right 12px
 		top 9px
-		font italic normal 15px Georgia,serif
-		color #95897c
+		font-size 15px
+		font-family 'neogothis_adf_stdlight', sans-serif
+		color #fff
 
 		.label
 			float left
@@ -687,7 +766,7 @@ body
 			vertical-align top
 			margin-left: 5px;
 			background $naranja
-			color #f9f5f1
+			color #fff
 			text-decoration none
 			padding .5em
 

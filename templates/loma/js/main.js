@@ -10,29 +10,29 @@ $(function() {
     //ICONOS EN EL MENU JOOMLA
     $menu = $('#menu');
     $dialog = $('.window')
-    $menu.find('.menu > .item-107 > span').prepend('<span class="icon-user"></span>');
-    $menu.find('.menu > .item-108 > span').prepend('<span class="icon-stack"></span>');
-    $menu.find('.menu > .item-109 > span').prepend('<span class="icon-images"></span>');
-    $menu.find('.menu > .item-110 > span').prepend('<span class="icon-cog"></span>');
-    $menu.find('.menu > .item-111 > span').prepend('<span class="icon-phone"></span>');
+    $menu.find('.menu > .item-107 ').prepend('<span class="icon icon-user"></span>');$menu.find('.menu > .item-107 ').append('<div class="border-item orange"></div>');
+    $menu.find('.menu > .item-108 ').prepend('<span class="icon icon-stack"></span>');$menu.find('.menu > .item-108 ').append('<div class="border-item green"></div>');
+    $menu.find('.menu > .item-109 ').prepend('<span class="icon icon-images"></span>');$menu.find('.menu > .item-109 ').append('<div class="border-item yellow"></div>');
+    $menu.find('.menu > .item-110 ').prepend('<span class="icon icon-cog"></span>');$menu.find('.menu > .item-110 ').append('<div class="border-item brown"></div>');
+    $menu.find('.menu > .item-111 ').prepend('<span class="icon icon-phone"></span>');$menu.find('.menu > .item-111 ').append('<div class="border-item orange"></div>');
 
-    $menu.find('.menu > .item-112 > span').prepend('<span class="icon-user"></span>');
-    $menu.find('.menu > .item-113 > span').prepend('<span class="icon-stack"></span>');
-    $menu.find('.menu > .item-114 > span').prepend('<span class="icon-images"></span>');
-    $menu.find('.menu > .item-115 > span').prepend('<span class="icon-cog"></span>');
-    $menu.find('.menu > .item-116 > span').prepend('<span class="icon-phone"></span>');
+    $menu.find('.menu > .item-112 ').prepend('<span class="icon icon-user"></span>');
+    $menu.find('.menu > .item-113 ').prepend('<span class="icon icon-stack"></span>');
+    $menu.find('.menu > .item-114 ').prepend('<span class="icon icon-images"></span>');
+    $menu.find('.menu > .item-115 ').prepend('<span class="icon icon-cog"></span>');
+    $menu.find('.menu > .item-116 ').prepend('<span class="icon icon-phone"></span>');
 
-    $menu.find('.menu > .item-107 > a').prepend('<span class="icon-user"></span>');
-    $menu.find('.menu > .item-108 > a').prepend('<span class="icon-stack"></span>');
-    $menu.find('.menu > .item-109 > a').prepend('<span class="icon-images"></span>');
-    $menu.find('.menu > .item-110 > a').prepend('<span class="icon-cog"></span>');
-    $menu.find('.menu > .item-111 > a').prepend('<span class="icon-phone"></span>');
+   /* $menu.find('.menu > .item-107 ').prepend('<span class="icon-user"></span>');
+    $menu.find('.menu > .item-108 ').prepend('<span class="icon-stack"></span>');
+    $menu.find('.menu > .item-109 ').prepend('<span class="icon-images"></span>');
+    $menu.find('.menu > .item-110 ').prepend('<span class="icon-cog"></span>');
+    $menu.find('.menu > .item-111 ').prepend('<span class="icon-phone"></span>');
 
-    $menu.find('.menu > .item-112 > a').prepend('<span class="icon-user"></span>');
-    $menu.find('.menu > .item-113 > a').prepend('<span class="icon-stack"></span>');
-    $menu.find('.menu > .item-114 > a').prepend('<span class="icon-images"></span>');
-    $menu.find('.menu > .item-115 > a').prepend('<span class="icon-cog"></span>');
-    $menu.find('.menu > .item-116 > a').prepend('<span class="icon-phone"></span>');
+    $menu.find('.menu > .item-112 ').prepend('<span class="icon-user"></span>');
+    $menu.find('.menu > .item-113 ').prepend('<span class="icon-stack"></span>');
+    $menu.find('.menu > .item-114 ').prepend('<span class="icon-images"></span>');
+    $menu.find('.menu > .item-115 ').prepend('<span class="icon-cog"></span>');
+    $menu.find('.menu > .item-116 ').prepend('<span class="icon-phone"></span>');*/
 
      $menu.find('.menu .item-116 span').on('click',function(){
        
@@ -184,12 +184,13 @@ $(function() {
 
     function resizes(){
             height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('.item-page').height()) - ($('#main_footer').height());
+            height_dispo_slider = getWindowHeight();//- ($('#main_header').height()); //- ($('.item-page').height()) - ($('#main_footer').height());
             width_dispo = getWindowWidth() - getScrollerWidth();
 
             $('#main').height(height_dispo).width(width_dispo);
             $('#slider .slide').height(height_dispo).width(width_dispo);
 
-            ratio_dispo = width_dispo / height_dispo;
+            ratio_dispo = width_dispo / height_dispo_slider;
             width_original = 1680;
             height_original = 900;
             ratio_original = width_original / height_original;
@@ -197,13 +198,13 @@ $(function() {
             if(ratio_dispo > ratio_original){
                     $('#slider .illus').width(width_dispo);
                     $('#slider .illus').height(width_dispo/ratio_original);
-                    marge_neg = Math.round(((width_dispo/ratio_original) - height_dispo ) / 2);
+                    marge_neg = Math.round(((width_dispo/ratio_original) - height_dispo_slider ) / 2);
                     $('#slider .illus').css('top', '-' + marge_neg + 'px');
                     $('#slider .illus').css('left', 0);		
             } else {
-                    $('#slider .illus').height(height_dispo);
-                    $('#slider .illus').width(height_dispo*ratio_original);
-                    marge_neg = Math.round(((height_dispo*ratio_original) - width_dispo ) / 2);
+                    $('#slider .illus').height(height_dispo_slider);
+                    $('#slider .illus').width(height_dispo_slider*ratio_original);
+                    marge_neg = Math.round(((height_dispo_slider*ratio_original) - width_dispo ) / 2);
                     $('#slider .illus').css('left', '-' + marge_neg + 'px');
                     $('#slider .illus').css('top', 0);
             }

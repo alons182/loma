@@ -34,7 +34,7 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
      <link rel="icon" type="image/png" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/favicon_32x32.ico">
-	 
+	 <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
      <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/modernizr-2.6.2.min.js"></script>
      
      
@@ -43,7 +43,7 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
 <body class="<?php echo ($itemid ? ' bgid-' . $itemid : '')?>">
 	
 	<header id="main_header">
-            <a id="logo" href="<?php echo $this->baseurl ?>"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/logo.jpg" alt="Loma Liberiana" /></a>
+            <div id="logo"><a href="<?php echo $this->baseurl ?>"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/logo.png" alt="Loma Liberiana" /></a></div>
             <div id="btn_nav">Menu</div>
             <nav id="menu">
                 <jdoc:include type="modules" name="menu" style="none" />
