@@ -45,9 +45,27 @@ body
 	overflow-y scroll
 	padding 0
 	position relative
+	
+	/*background-attachment fixed
+	background-color transparent
+	background-position center  center
+	background-repeat repeat, no-repeat, no-repeat 
+	background-size auto auto, cover, cover*/
+
+/*.bgid-101
+	background-image url('../img/pattern.png') , url('../img/banner2.jpg')*/
+
+img.ac_bgimage
+	position fixed
+	left 0px
+	top 0px
+	width 100%
+	display none
+	z-index 0
+
 
 #main_header
-	background rgba(53,86,15,0.8)
+	background rgba(53,86,15,0.7)
 	opacity 1
 	color #fff
 	display block
@@ -368,8 +386,8 @@ body
 			overflow hidden
 			position relative
 		.cir_banner
-			position absolute
-			top 5%
+			position fixed
+			top 15%
 			left 75%
 			background url('../img/cir_banner.png') right 0 no-repeat
 			width 185px
@@ -378,6 +396,7 @@ body
 			color #fff
 			text-align center
 			text-decoration none
+			z-index 20
 
 			span
 				display block
@@ -733,7 +752,7 @@ body
 
 #main_footer 
 	position relative
-	background rgba(129, 112, 59, 1)
+	background rgba(129, 112, 59, .7)
 
 	height 46px
 	overflow hidden

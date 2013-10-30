@@ -1,12 +1,15 @@
 $(function() {
 
 	var anim_bulle;
-    var panel_scroll = null;   
+    var panel_scroll = null; 
+    var $ac_background  = $('#ac_background'),
+        $ac_bgimage     = $ac_background.find('.ac_bgimage');
     
 	resizes();                     // resize pagina
     $(window).scroll(resizes);     // calcula au défilement de la page
     $(window).resize(resizes);     // calcul au redimensionnement de la page
-	
+	//adjustImageSize($ac_bgimage);
+    //$ac_bgimage.fadeIn(1000);
     //ICONOS EN EL MENU JOOMLA
     $menu = $('#menu');
     $dialog = $('.window')
@@ -156,6 +159,8 @@ $(function() {
 		//tourne_carousel_hp();	
 	
 		$('.slide:visible').hide();
+      // if($(this).attr('data-target')== 2)
+            showItemImage($(this).attr('data-bg'));
 		$('#slide_' + $(this).attr('data-target')).fadeIn(400);
 		
 		$('.cir_banner').animate({
@@ -180,17 +185,59 @@ $(function() {
 	
 	// ACTIVACION DEL MENU PROYECTO
 	$('#menu_proyecto a:first').click();
+
+    function showItemImage (source) {
+                            //if its the current one return
+                        if($ac_bgimage.attr('src') === source)
+                            return false;
+                                
+                        var $itemImage = $('<img src="'+source+'" alt="Background" class="ac_bgimage"/>');
+                        $itemImage.insertBefore($ac_bgimage);
+                        adjustImageSize($itemImage);
+                        $ac_bgimage.fadeOut(1500, function() {
+                            $(this).remove();
+                            $ac_bgimage = $itemImage;
+                        });
+                        $itemImage.fadeIn(1500);
+                    }
+
+    function adjustImageSize ($img) {
+                        var w_w = $(window).width(),
+                        w_h = $(window).height(),
+                        r_w = w_h / w_w,
+                        i_w = $img.width(),
+                        i_h = $img.height(),
+                        r_i = i_h / i_w,
+                        new_w,new_h,
+                        new_left,new_top;
+                            
+                        if(r_w > r_i){
+                            new_h   = w_h;
+                            new_w   = w_h / r_i;
+                        }
+                        else{
+                            new_h   = w_w * r_i;
+                            new_w   = w_w;
+                        }
+                            
+                        $img.css({
+                            width   : new_w + 'px',
+                            height  : new_h + 'px',
+                            left    : (w_w - new_w) / 2 + 'px',
+                            top     : (w_h - new_h) / 2 + 'px'
+                        });
+                    }
 	
 
     function resizes(){
             height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('.item-page').height()) - ($('#main_footer').height());
-            height_dispo_slider = getWindowHeight();//- ($('#main_header').height()); //- ($('.item-page').height()) - ($('#main_footer').height());
+            height_dispo_slider = getWindowHeight(); //- ($('#main_footer').height()); //- ($('#main_header').height()); - ($('.item-page').height()) - ($('#main_footer').height());
             width_dispo = getWindowWidth() - getScrollerWidth();
 
             $('#main').height(height_dispo).width(width_dispo);
-            $('#slider .slide').height(height_dispo).width(width_dispo);
-
-            ratio_dispo = width_dispo / height_dispo_slider;
+            //$('#slider .slide').height(height_dispo).width(width_dispo);
+            adjustImageSize($ac_bgimage);
+           /* ratio_dispo = width_dispo / height_dispo;
             width_original = 1680;
             height_original = 900;
             ratio_original = width_original / height_original;
@@ -198,16 +245,18 @@ $(function() {
             if(ratio_dispo > ratio_original){
                     $('#slider .illus').width(width_dispo);
                     $('#slider .illus').height(width_dispo/ratio_original);
-                    marge_neg = Math.round(((width_dispo/ratio_original) - height_dispo_slider ) / 2);
+                    marge_neg = Math.round(((width_dispo/ratio_original) - height_dispo ) / 2);
                     $('#slider .illus').css('top', '-' + marge_neg + 'px');
+                    //$('#slider .illus').css('top', '2000px');
                     $('#slider .illus').css('left', 0);		
             } else {
-                    $('#slider .illus').height(height_dispo_slider);
-                    $('#slider .illus').width(height_dispo_slider*ratio_original);
-                    marge_neg = Math.round(((height_dispo_slider*ratio_original) - width_dispo ) / 2);
+                    $('#slider .illus').height(height_dispo);
+                    $('#slider .illus').width(height_dispo*ratio_original);
+                    marge_neg = Math.round(((height_dispo*ratio_original) - width_dispo ) / 2);
                     $('#slider .illus').css('left', '-' + marge_neg + 'px');
+                    //$('#slider .illus').css('top', '2000px');
                     $('#slider .illus').css('top', 0);
-            }
+            }*/
 
 
 

@@ -41,7 +41,11 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
 </head>
 
 <body class="<?php echo ($itemid ? ' bgid-' . $itemid : '')?>">
-	
+	<div id="ac_background" class="ac_background">
+            <img class="ac_bgimage" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/banner2.jpg" alt="Background"/>
+            <div class="ac_overlay"></div>
+            <div class="ac_loading"></div>
+        </div>
 	<header id="main_header">
             <div id="logo"><a href="<?php echo $this->baseurl ?>"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/logo.png" alt="Loma Liberiana" /></a></div>
             <div id="btn_nav">Menu</div>
