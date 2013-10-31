@@ -143,7 +143,7 @@ $(function() {
 
 	// EFECTO MENU PROYECTO
 	$('#menu_proyecto').hide();
-	$('#menu_proyecto').slideDown(600);
+	
 	
     // SCROLL PANEL A COLUMNA
     panel_scroll = $(".columna").mCustomScrollbar({
@@ -214,6 +214,7 @@ $(function() {
                             $.when(showBGImage()).done(function(){
                                 //hide the loading status image
                                 $ac_loading.hide();
+                                $('#menu_proyecto').slideDown(600);
                                
                                 
                             });
@@ -295,7 +296,7 @@ $(function() {
 
             $('#main').height(height_dispo).width(width_dispo);
             $('#slider .slide').height(height_dispo).width(width_dispo);
-           // adjustImageSize($ac_bgimage);
+            adjustImageSize($ac_bgimage);
             ratio_dispo = width_dispo / height_dispo;
             width_original = 1680;
             height_original = 900;
