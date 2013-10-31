@@ -32,6 +32,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #menu ul li .border-item{display:none;height:5px;margin:5px auto 0;width:100%}
 #main_header #menu ul li:hover .border-item{display:block;}
 #main_header #menu ul .active .border-item,#main_header #menu ul .active .border-item{display:block;}
+#main_header .info-contacto{position:absolute;right:175px;top:25px;font-size:12px;text-align:center}
 #main_header .idiomas{position:absolute;right:20px;top:30px;font-size:12px;}
 #main_header .idiomas a{background:url("../img/icono_circulo_blanco.png") 0 0 no-repeat;padding-left:26px;padding-bottom:5px;padding-top:3px}
 #main_header #contactbox .column1,#main_header #contactbox .column2{display:inline-block;vertical-align:top;width:45%}

@@ -8,8 +8,7 @@ $(function() {
 	resizes();                     // resize pagina
     $(window).scroll(resizes);     // calcula au défilement de la page
     $(window).resize(resizes);     // calcul au redimensionnement de la page
-	//adjustImageSize($ac_bgimage);
-    //$ac_bgimage.fadeIn(1000);
+	
     //ICONOS EN EL MENU JOOMLA
     $menu = $('#menu');
     $dialog = $('.window')
@@ -235,7 +234,7 @@ $(function() {
             width_dispo = getWindowWidth() - getScrollerWidth();
 
             $('#main').height(height_dispo).width(width_dispo);
-            //$('#slider .slide').height(height_dispo).width(width_dispo);
+            $('#slider .slide').height(height_dispo).width(width_dispo);
             adjustImageSize($ac_bgimage);
            /* ratio_dispo = width_dispo / height_dispo;
             width_original = 1680;

@@ -53,6 +53,9 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
                 <jdoc:include type="modules" name="menu" style="none" />
                 
             </nav>
+             <div class="info-contacto">
+                <jdoc:include type="modules" name="info-contacto" style="none" />
+            </div>
             <div class="idiomas">
                 <jdoc:include type="modules" name="idiomas" style="none" />
             </div>
