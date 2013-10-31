@@ -20,7 +20,7 @@
 .jspArrowUp,.mCSB_buttonUp{background-image:url("../img/flecha_up.gif") !important;background-position:50% 50% !important;background-repeat:no-repeat;background:#cfc8c0;width:10px}
 body{background:#f0efed;color:#333;font-family:'Muli',sans-serif;font-size:14px;height:100%;margin:0;overflow-y:scroll;padding:0;position:relative;}
 img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
-.ac_loading{position:fixed;top:10px;right:10px;background:#000 url("../img/loader.gif") no-repeat center center;width:50px;height:50px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px 10px 10px 10px;z-index:999;opacity:.7;display:none}
+.ac_loading{position:fixed;top:90px;right:10px;background:#000 url("../img/loader.gif") no-repeat center center;width:50px;height:50px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px 10px 10px 10px;z-index:999;opacity:.7;display:none}
 #main_header{background:rgba(53,86,15,0.7);opacity:1;color:#fff;display:block;height:72px;position:relative;}
 #main_header a{color:#fff}
 #main_header #logo{position:absolute;padding:1em;z-index:2;top:0;left:20px;background:rgba(255,255,255,0.8);-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)}
