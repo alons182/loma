@@ -19,7 +19,7 @@ $(function() {
                     $ItemImages.push($(this).children('a:first').attr('data-bg'));
                 });
                 $ItemImages.push($ac_bgimage.attr('src'));
-                loadPage();
+                
     
 	resizes();                     // resize pagina
     $(window).scroll(resizes);     // calcula au défilement de la page
@@ -144,7 +144,7 @@ $(function() {
 	// EFECTO MENU PROYECTO
 	$('#menu_proyecto').hide();
 	
-	
+	loadPage();
     // SCROLL PANEL A COLUMNA
     panel_scroll = $(".columna").mCustomScrollbar({
         theme:"dark",
