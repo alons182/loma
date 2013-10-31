@@ -198,8 +198,7 @@ $(function() {
 		current = $(this).attr('data-target');
 	});
 	
-	// ACTIVACION DEL MENU PROYECTO
-	$('#menu_proyecto a:first').click();
+	
 
     function loadPage () {
                         /*
@@ -215,6 +214,8 @@ $(function() {
                                 //hide the loading status image
                                 $ac_loading.hide();
                                 $('#menu_proyecto').slideDown(600);
+                                // ACTIVACION DEL MENU PROYECTO
+                                $('#menu_proyecto a:first').click();
                                
                                 
                             });
