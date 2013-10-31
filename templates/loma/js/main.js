@@ -3,7 +3,8 @@ $(function() {
 	var anim_bulle;
     var panel_scroll = null; 
     var $ac_background  = $('#ac_background'),
-        $ac_bgimage     = $ac_background.find('.ac_bgimage');
+        $ac_bgimage     = $ac_background.find('.ac_bgimage'),
+        $ac_loading     = $ac_background.find('.ac_loading');
 
     $menuItems      = $('#menu_proyecto').children('li'),
                 totalItems      = $menuItems.length,
@@ -174,7 +175,7 @@ $(function() {
 	
 		$('.slide:visible').hide();
       // if($(this).attr('data-target')== 2)
-            showItemImage($(this).attr('data-bg'));
+           // showItemImage($(this).attr('data-bg'));
 		$('#slide_' + $(this).attr('data-target')).fadeIn(400);
 		
 		$('.cir_banner').animate({
@@ -208,11 +209,11 @@ $(function() {
                             4- shows the menu items;
                             5- initializes the menu items events
                          */
-                        //$ac_loading.show();//show loading status image
+                        $ac_loading.show();//show loading status image
                         $.when(loadImages()).done(function(){
                             $.when(showBGImage()).done(function(){
                                 //hide the loading status image
-                                //$ac_loading.hide();
+                                $ac_loading.hide();
                                
                                 
                             });
