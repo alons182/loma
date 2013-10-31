@@ -227,8 +227,9 @@ $(function() {
                         });
                     }
 	
-
+               
     function resizes(){
+
             height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('.item-page').height()) - ($('#main_footer').height());
             height_dispo_slider = getWindowHeight(); //- ($('#main_footer').height()); //- ($('#main_header').height()); - ($('.item-page').height()) - ($('#main_footer').height());
             width_dispo = getWindowWidth() - getScrollerWidth();
@@ -236,12 +237,28 @@ $(function() {
             $('#main').height(height_dispo).width(width_dispo);
             $('#slider .slide').height(height_dispo).width(width_dispo);
             adjustImageSize($ac_bgimage);
-           /* ratio_dispo = width_dispo / height_dispo;
+            ratio_dispo = width_dispo / height_dispo;
             width_original = 1680;
             height_original = 900;
             ratio_original = width_original / height_original;
 
-            if(ratio_dispo > ratio_original){
+           /* if(ratio_dispo > ratio_original){
+                    $ac_bgimage.width(width_dispo);
+                    $ac_bgimage.height(width_dispo/ratio_original);
+                    marge_neg = Math.round(((width_dispo/ratio_original) - height_dispo ) / 2);
+                    $ac_bgimage.css('top', '-' + marge_neg + 'px');
+                    //$('#slider .illus').css('top', '2000px');
+                    $ac_bgimage.css('left', 0);     
+            } else {
+                    $ac_bgimage.height(height_dispo);
+                    $ac_bgimage.width(height_dispo*ratio_original);
+                    marge_neg = Math.round(((height_dispo*ratio_original) - width_dispo ) / 2);
+                    $ac_bgimage.css('left', '-' + marge_neg + 'px');
+                    //$('#slider .illus').css('top', '2000px');
+                    $ac_bgimage.css('top', 0);
+            }*/
+
+           /* if(ratio_dispo > ratio_original){
                     $('#slider .illus').width(width_dispo);
                     $('#slider .illus').height(width_dispo/ratio_original);
                     marge_neg = Math.round(((width_dispo/ratio_original) - height_dispo ) / 2);

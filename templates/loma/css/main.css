@@ -128,6 +128,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #logo img{height:62px}
 #main_header #menu{margin-left:150px;}
 #main_header #menu ul li span.icon{margin-bottom:0;}
+#main #menu_proyecto{top:50px;left:20px}
 }@media only screen and (max-width:  800px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#666 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
 #main_header #menu{margin-left:0;top:60px;left:0;width:100%;position:absolute;z-index:20;background:#222;display:none;}
 #main_header #menu ul{padding:0;}
@@ -140,6 +141,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #contactbox .window{top:73px}
 #main #menu_proyecto ul li a{font-size:18px;padding:.5em;}
 #main #menu_proyecto ul li a span{font-size:12px}
+#main #slider .cir_banner{left:55%}
 #main .franja{height:35px;}
 #main .franja h1{display:none}
 #main .franja span{display:inline;font-size:12px}
