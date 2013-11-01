@@ -95,6 +95,9 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
             <div id="copyright">
                <jdoc:include type="modules" name="copyright" style="none" />
             </div>
+             <div id="menu-footer">
+               <jdoc:include type="modules" name="menu-footer" style="none" />
+            </div>
             <div id="redes">
                 <jdoc:include type="modules" name="redes" style="none" />
                 

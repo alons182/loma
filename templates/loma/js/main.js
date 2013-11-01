@@ -291,11 +291,11 @@ $(function() {
 */
             $menu = $('#menu');
             $dialog = $('.window')
-            $menu.find('.menu > .item-107 ').prepend('<span class="icon icon-user"></span>');$menu.find('.menu > .item-107 ').append('<div class="border-item orange"></div>');
-            $menu.find('.menu > .item-108 ').prepend('<span class="icon icon-stack"></span>');$menu.find('.menu > .item-108 ').append('<div class="border-item green"></div>');
+            $menu.find('.menu > .item-107 ').prepend('<span class="icon icon-user"></span>');$menu.find('.menu > .item-107 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-108 ').prepend('<span class="icon icon-stack"></span>');$menu.find('.menu > .item-108 ').append('<div class="border-item yellow"></div>');
             $menu.find('.menu > .item-109 ').prepend('<span class="icon icon-images"></span>');$menu.find('.menu > .item-109 ').append('<div class="border-item yellow"></div>');
-            $menu.find('.menu > .item-110 ').prepend('<span class="icon icon-cog"></span>');$menu.find('.menu > .item-110 ').append('<div class="border-item brown"></div>');
-            $menu.find('.menu > .item-111 ').prepend('<span class="icon icon-phone"></span>');$menu.find('.menu > .item-111 ').append('<div class="border-item orange"></div>');
+            $menu.find('.menu > .item-110 ').prepend('<span class="icon icon-cog"></span>');$menu.find('.menu > .item-110 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-111 ').prepend('<span class="icon icon-phone"></span>');$menu.find('.menu > .item-111 ').append('<div class="border-item yellow"></div>');
 
             $menu.find('.menu > .item-112 ').prepend('<span class="icon icon-user"></span>');
             $menu.find('.menu > .item-113 ').prepend('<span class="icon icon-stack"></span>');

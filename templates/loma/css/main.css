@@ -33,8 +33,8 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #menu ul li .border-item{display:none;height:5px;margin:5px auto 0;width:100%}
 #main_header #menu ul li:hover .border-item{display:block;}
 #main_header #menu ul .active .border-item,#main_header #menu ul .active .border-item{display:block;}
-#main_header .info-contacto{position:absolute;right:175px;top:25px;font-size:12px;text-align:center}
-#main_header .idiomas{position:absolute;right:20px;top:30px;font-size:12px;}
+#main_header .info-contacto{color:#435820;position:absolute;right:175px;top:10px;font-size:12px;text-align:center;padding:1em;background:rgba(255,255,255,0.8);-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)}
+#main_header .idiomas{position:absolute;right:20px;top:45px;font-size:12px;}
 #main_header .idiomas a{background:url("../img/icono_circulo_blanco.png") 0 0 no-repeat;padding-left:26px;padding-bottom:5px;padding-top:3px}
 #main_header #contactbox .column1,#main_header #contactbox .column2{display:inline-block;vertical-align:top;width:45%}
 #main_header #contactbox .column1{margin-right:40px}
@@ -44,9 +44,9 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #contactbox .form-item{margin-top:5px;zoom:1;}
 #main_header #contactbox .form-item label{font-size:14px;color:#333;width:70px;float:left;display:block;text-align:right;margin-right:10px;padding-top:10px}
 #main_header #contactbox .form-item .error{color:#f00;float:right}
-#main_header #contactbox .form-item .form-text{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font-size:15px;color:#999;background:none;width:200px;display:block;float:left}
+#main_header #contactbox .form-item .form-text{border-top:none;border-left:none;border-right:none;border:1px solid #b2b1af;padding:10px 0 8px 0;font-size:15px;color:#999;background:none;width:200px;display:block;float:left}
 #main_header #contactbox .form-item .form-text:hover,#main_header #contactbox .form-item .form-text:focus,#main_header #contactbox .form-item textarea:hover,#main_header #contactbox .form-item textarea:focus{background:#f9f5f1;border-color:#dd841d}
-#main_header #contactbox .form-item textarea{border-top:none;border-left:none;border-right:none;border-bottom:1px solid #b2b1af;padding:10px 0 8px 0;font-size:15px;color:#999;background:none;width:200px;height:47px;display:block;float:left;resize:none}
+#main_header #contactbox .form-item textarea{border-top:none;border-left:none;border-right:none;border:1px solid #b2b1af;padding:10px 0 8px 0;font-size:15px;color:#999;background:none;width:200px;height:47px;display:block;float:left;resize:none}
 #main_header #contactbox .buttons{width:290px;margin-top:10px;}
 #main_header #contactbox .buttons button,#main_header #contactbox .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #dd8704;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercas}
 #main_header #contactbox .mensaje span{border-radius:5px;padding:.5em;width:85%}
@@ -122,6 +122,11 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main #plano #mapa .details-item .panel ul li{font-family:'neogothis_adf_stdregular',sans-serif;font-size:14px}
 #main_footer{position:relative;background:rgba(129,112,59,0.7);height:46px;overflow:hidden;display:block;clear:both;z-index:2;}
 #main_footer #copyright{float:left;margin-left:11px;margin-top:11px;position:relative;color:#fff;font-family:'neogothis_adf_stdlight',sans-serif}
+#main_footer #menu-footer{padding-top:10px;font-family:'neogothis_adf_stdregular',sans-serif;font-size:16px;display:block;text-align:center;}
+#main_footer #menu-footer ul{list-style-type:none;margin:0;padding:0 0 0 25px;}
+#main_footer #menu-footer ul li{display:inline-block;vertical-align:top;margin-right:2em;}
+#main_footer #menu-footer ul li span,#main_footer #menu-footer ul li a{color:#fff;display:block;font-size:14px;text-decoration:none;cursor:pointer}
+#main_footer #menu-footer ul li a:hover,#main_footer #menu-footer ul li span:hover{color:#f6ef95}
 #main_footer #redes{position:absolute;right:12px;top:9px;font-size:15px;font-family:'neogothis_adf_stdlight',sans-serif;color:#fff;}
 #main_footer #redes .label{float:left;padding-right:3px;padding-top:5px}
 #main_footer #redes a{display:inline-block;vertical-align:top;margin-left:5px;background:#dd8704;color:#fff;text-decoration:none;padding:.5em}
@@ -130,7 +135,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #menu{margin-left:150px;}
 #main_header #menu ul li span.icon{margin-bottom:0;}
 #main #menu_proyecto{top:50px;left:20px}
-}@media only screen and (max-width:  800px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#666 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
+}@media only screen and (max-width:  800px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#dd8704 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
 #main_header #menu{margin-left:0;top:60px;left:0;width:100%;position:absolute;z-index:20;background:#222;display:none;}
 #main_header #menu ul{padding:0;}
 #main_header #menu ul li{width:100%;float:none;border-bottom:1px solid #666;background-size:13px 12px;}
