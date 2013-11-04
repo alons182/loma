@@ -419,37 +419,73 @@ img.ac_bgimage
 		.slide
 			overflow hidden
 			position relative
+		
 		.cir_banner
 			position fixed
 			top 15%
 			left 100%
-			background url('../img/cir_banner.png') right 0 no-repeat
-			width 185px
-			height 170px
-			padding 35px 20px 30px 22px
+			background url('../img/bg_anuncio.png') right 0 no-repeat
+			width 315px
+			height 96px
+			//padding 35px 20px 30px 22px
 			color #fff
-			text-align center
+			//text-align center
 			text-decoration none
 			z-index 20
 
+
 			span
 				display block
+			.h1
+				font-family 'neogothis_adf_stdbold', sans-serif
+				font-size 40px
+				text-transform uppercase
+				text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)
+				float right
+				margin-top -15px
 			.h2
 				font-family 'neogothis_adf_stdregular', sans-serif
-				font-size 20px
-				color $verde
-				border-bottom 1px dotted #fff
-				padding-bottom 9px
-				margin 14px 0 9px 0
+				font-size 16px
+				color $amarillo
+				
+				//padding-bottom 9px
+				//margin 14px 0 9px 0
+				text-transform uppercase
 			.h3
 				font-family 'Muli', sans-serif
 				text-transform uppercase
 				color $amarillo
+				font-size 12px
 			.p 
 				font-family 'neogothis_adf_stdbold', sans-serif
-				font-size 3em
+				font-size 24px
 				margin 0
 				text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)
+				text-transform uppercase
+			.slide-anuncio
+				padding-bottom 1.5em
+				padding-right 1.5em
+				color #fff
+			.texto-anuncio, .click-anuncio
+				display inline-block
+				vertical-align top
+			.texto-anuncio
+				width 200px
+				margin-left 20px
+				margin-top 25px
+			.click-anuncio
+				margin-left 10px
+				margin-top 10px
+
+				.icon-anuncio-click
+					background url('../img/icon-anuncio-click.png') 0 0 no-repeat
+					width 42px
+					height 42px
+					display block 
+					position relative
+					left 30px
+					top 10px
+
 
 
 	.franja
@@ -795,20 +831,20 @@ img.ac_bgimage
 	z-index 2
 
 	#copyright
-		float left
-		margin-left 11px
+		float right
+		margin-right 11px
 		margin-top 11px
 		position relative
 		color #fff
-		font-family 'neogothis_adf_stdlight', sans-serif
+		font-family 'Muli', sans-serif
 	#menu-footer
-		//margin-left 265px
-		padding-top 10px
+		float left
+		padding-top 15px
 		font-family 'neogothis_adf_stdregular', sans-serif
 		font-size 16px 
 		//font-weight light
 		display block
-		text-align center
+		//text-align center
 
 		ul 
 			list-style-type none
@@ -818,7 +854,7 @@ img.ac_bgimage
 			li 
 				display inline-block
 				vertical-align top
-				margin-right 2em
+				margin-right 1em
 				
 				
 
@@ -833,9 +869,12 @@ img.ac_bgimage
 				a:hover, span:hover
 					color $amarillo
 	#redes
-		position absolute
-		right 12px
-		top 9px
+		display block
+		float left
+		margin-top 7px
+		//position absolute
+		//left 12px
+		//top 8px
 		font-size 15px
 		font-family 'neogothis_adf_stdlight', sans-serif
 		color #fff
@@ -853,6 +892,15 @@ img.ac_bgimage
 			color #fff
 			text-decoration none
 			padding .5em
+		#planea
+			background #f9f5f1
+			width 32px
+			height 18px
+			padding-top 5px
+			padding-bottom 10px
+
+			img 
+				width 100%
 
 
 

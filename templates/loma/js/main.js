@@ -416,6 +416,22 @@ $(function() {
 
             });
 
+             //SLIDESHOW IMG LOTES
+
+            $('.cir_banner').cycle({ 
+                fx:     'fade',
+                //easing: 'easeOutBack',
+                speed:  'fast',
+                
+                timeout: 3000,
+                slideResize: 0
+                //pager:  '#slideshow-nav'
+
+             });
+            
+           
+                    
+
             
 
             resizes();                     // resize pagina
