@@ -423,7 +423,7 @@ $(function() {
                 //easing: 'easeOutBack',
                 speed:  'fast',
                 
-                timeout: 3000,
+                timeout: 5000,
                 slideResize: 0
                 //pager:  '#slideshow-nav'
 

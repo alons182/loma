@@ -75,7 +75,11 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main #slider .cir_banner .texto-anuncio,#main #slider .cir_banner .click-anuncio{display:inline-block;vertical-align:top}
 #main #slider .cir_banner .texto-anuncio{width:195px;margin-left:20px;margin-top:25px}
 #main #slider .cir_banner .click-anuncio{margin-left:10px;margin-top:10px;}
-#main #slider .cir_banner .click-anuncio .icon-anuncio-click{background:url("../img/icon-anuncio-click.png") 0 0 no-repeat;width:42px;height:42px;display:block;position:relative;left:40px;top:10px}
+#main #slider .cir_banner .click-anuncio .icon-anuncio-click{background:url("../img/icon-anuncio-click.png") 0 0 no-repeat;width:42px;height:42px;display:block;position:relative;left:30px;top:0}
+#main #slider .anuncios-bottom{position:absolute;right:0;bottom:0;}
+#main #slider .anuncios-bottom .prima,#main #slider .anuncios-bottom .ahorro{display:inline-block;vertical-align:top;margin-right:10px;}
+#main #slider .anuncios-bottom .prima .big,#main #slider .anuncios-bottom .ahorro .big{font-size:44px;position:absolute;font-weight:bold}
+#main #slider .anuncios-bottom .prima{color:#435820;font-size:18px;font-style:italic}
 #main .franja{display:block;position:absolute;bottom:0;left:0;height:174px;width:100%;background:url("../img/textura_franja.png") 50% 0 repeat;text-align:center;color:#fff;}
 #main .franja h1{font:normal 55px Georgia,serif;text-transform:uppercase;margin:0;padding-top:15px}
 #main .franja .linea{background:#dd8704;height:5px;margin:5px 0}
