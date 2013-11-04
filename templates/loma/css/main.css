@@ -73,9 +73,9 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main #slider .cir_banner .p{font-family:'neogothis_adf_stdbold',sans-serif;font-size:24px;margin:0;text-shadow:0 2px 0 rgba(0,0,0,0.5);text-transform:uppercase}
 #main #slider .cir_banner .slide-anuncio{padding-bottom:.5em;padding-right:1.5em;color:#fff}
 #main #slider .cir_banner .texto-anuncio,#main #slider .cir_banner .click-anuncio{display:inline-block;vertical-align:top}
-#main #slider .cir_banner .texto-anuncio{width:200px;margin-left:20px;margin-top:25px}
+#main #slider .cir_banner .texto-anuncio{width:195px;margin-left:20px;margin-top:25px}
 #main #slider .cir_banner .click-anuncio{margin-left:10px;margin-top:10px;}
-#main #slider .cir_banner .click-anuncio .icon-anuncio-click{background:url("../img/icon-anuncio-click.png") 0 0 no-repeat;width:42px;height:42px;display:block;position:relative;left:30px;top:10px}
+#main #slider .cir_banner .click-anuncio .icon-anuncio-click{background:url("../img/icon-anuncio-click.png") 0 0 no-repeat;width:42px;height:42px;display:block;position:relative;left:40px;top:10px}
 #main .franja{display:block;position:absolute;bottom:0;left:0;height:174px;width:100%;background:url("../img/textura_franja.png") 50% 0 repeat;text-align:center;color:#fff;}
 #main .franja h1{font:normal 55px Georgia,serif;text-transform:uppercase;margin:0;padding-top:15px}
 #main .franja .linea{background:#dd8704;height:5px;margin:5px 0}
@@ -127,7 +127,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main #plano #mapa .details-item .panel h3{color:#dd8704;font-family:'neogothis_adf_stdregular',sans-serif;font-size:18px}
 #main #plano #mapa .details-item .panel ul li{font-family:'neogothis_adf_stdregular',sans-serif;font-size:14px}
 #main_footer{position:relative;background:rgba(129,112,59,0.7);height:46px;overflow:hidden;display:block;clear:both;z-index:2;}
-#main_footer #copyright{float:right;margin-right:11px;margin-top:11px;position:relative;color:#fff;font-family:'Muli',sans-serif}
+#main_footer #copyright{float:right;margin-right:11px;margin-top:11px;position:relative;color:#fff;font-family:'Muli',sans-serif;font-size:12px}
 #main_footer #menu-footer{float:left;padding-top:15px;font-family:'neogothis_adf_stdregular',sans-serif;font-size:16px;display:block;}
 #main_footer #menu-footer ul{list-style-type:none;margin:0;padding:0 0 0 25px;}
 #main_footer #menu-footer ul li{display:inline-block;vertical-align:top;margin-right:1em;}
