@@ -42,7 +42,7 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
 
 <body class="<?php echo ($itemid ? ' bgid-' . $itemid : '')?>">
 	<div id="ac_background" class="ac_background">
-            <img class="ac_bgimage" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/banner2.jpg" alt="Background"/>
+            <img class="ac_bgimage" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/banner.jpg" alt="Background"/>
             <div class="ac_overlay"></div>
             <div class="ac_loading"></div>
         </div>
@@ -108,7 +108,8 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery-1.10.1.min.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery.mousewheel.min.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery.mCustomScrollbar.min.js"></script>
-        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery.cycle.all.js"></script>
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery.cycle2.min.js"></script>
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery.cycle2.center.min.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/jquery.validate.min.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/utils.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js"></script>
