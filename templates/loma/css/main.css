@@ -147,15 +147,15 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 @media only screen and (max-width:  1030px){#main_header{height:62px;}
 #main_header #logo img{height:62px}
 #main_header #menu{margin-left:150px;}
-#main_header #menu ul li span.icon{margin-bottom:0;}
+#main_header #menu ul li a span.icon,#main_header #menu ul li span span.icon{margin-bottom:0;font-size:12px}
 #main_header .info-contacto{padding:.5em}
 #main #menu_proyecto{top:50px;left:20px}
 }@media only screen and (max-width:  800px){#main_header #btn_nav{position:absolute;top:5px;right:5px;padding:7px 10px 8px 30px;background:#dd8704 url("../img/flecha_menu.png") 10px 50% no-repeat;background-size:12px 9px;display:block;cursor:pointer;font:bold 12px Arial,sans-serif}
 #main_header #menu{margin-left:0;top:60px;left:0;width:100%;position:absolute;z-index:20;background:#222;display:none;}
 #main_header #menu ul{padding:0;}
 #main_header #menu ul li{width:100%;float:none;border-bottom:1px solid #666;background-size:13px 12px;}
-#main_header #menu ul li span.icon{display:inline-block;vertical-align:middle}
 #main_header #menu ul li a,#main_header #menu ul li span{padding:5px 5px 3px 10px;background:none;color:#fff;width:auto;display:inline-block;vertical-align:middle;}
+#main_header #menu ul li a span.icon,#main_header #menu ul li span span.icon{display:inline-block;vertical-align:middle}
 #main_header #menu ul .active a,#main_header #menu ul .active span{width:auto;color:#dd8704}
 #main_header .idiomas{display:none}
 #main_header #contactbox #dialog{left:5px}
