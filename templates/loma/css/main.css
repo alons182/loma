@@ -190,7 +190,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main #plano #mapa .details-item .image-item #next{top:150px}
 #main #plano #mapa .details-item .image-item img{width:100%}
 #main #plano #mapa .details-item .panel ul li{font-size:12px}
-#main #disenos #mapa .cycle-slideshow .slide-diseno{width:600px;height:380px}
+#main #disenos #mapa .cycle-slideshow .slide-diseno{width:800px;height:380px}
 }@media only screen and (max-width: 1024px){#main #disenos #mapa .cycle-slideshow .slide-diseno{width:500px;height:300px}
 }.mCSB_container{width:auto;margin-right:30px;overflow:hidden}
 .mCSB_container.mCS_no_scrollbar{margin-right:0}
