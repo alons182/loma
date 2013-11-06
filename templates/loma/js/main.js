@@ -487,6 +487,7 @@ $(function() {
                     $('#main .columna').height(height_dispo).width('420px');
                     $('#main .plan').width(largeur_dispo);
                     $('#main .map').height(height_dispo - ($('#main .info-top').height())).width(largeur_dispo);
+                    $('#main iframe').height(height_dispo - ($('#main .info-top').height())-(8)).width(largeur_dispo-(5));
                     $('#main .mapa-proyecto').height(height_dispo - ($('#main .info-top').height())).width(largeur_dispo);
                     
                     $('.columna').mCustomScrollbar("update");
@@ -499,6 +500,7 @@ $(function() {
                     $('#main .columna').height('auto').width('auto');
                     $('#main .plan').width('100%');
                     $('#main .map').height('250px').width('100%');
+                    $('#main iframe').height('250px').width('100%');
                     
                     
                     $('.columna').mCustomScrollbar("disable",true);
