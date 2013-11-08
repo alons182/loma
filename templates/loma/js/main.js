@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function($) {
 
 	            var anim_bulle;
                 var panel_scroll = null; 
