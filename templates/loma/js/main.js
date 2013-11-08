@@ -260,7 +260,7 @@ jQuery(function($) {
 
                          //SLIDESHOW IMG LOTES
 
-                        $('#slideshow').before('<div id="slideshow-nav">').cycle({ 
+                      /*  $('#slideshow').before('<div id="slideshow-nav">').cycle({ 
                             fx:     'fade',
                             //easing: 'easeOutBack',
                             speed:  'fast',
@@ -271,7 +271,7 @@ jQuery(function($) {
                             slideResize: 0
                             //pager:  '#slideshow-nav'
 
-                         });
+                         });*/
                         
                         };
                     
@@ -424,7 +424,7 @@ jQuery(function($) {
 
              //SLIDESHOW IMG LOTES
 
-            $('.cir_banner').cycle({ 
+           /* $('.cir_banner').cycle({ 
                 fx:     'fade',
                 //easing: 'easeOutBack',
                 speed:  'fast',
@@ -433,7 +433,7 @@ jQuery(function($) {
                 slideResize: 0
                 //pager:  '#slideshow-nav'
 
-             });
+             });*/
             
            
                     

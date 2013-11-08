@@ -50,12 +50,12 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #contactbox .form-item .form-text:hover,#main_header #contactbox .form-item .form-text:focus,#main_header #contactbox .form-item textarea:hover,#main_header #contactbox .form-item textarea:focus{background:#f9f5f1;border-color:#dd841d}
 #main_header #contactbox .form-item textarea{border-top:none;border-left:none;border-right:none;border:1px solid #b2b1af;padding:10px 0 8px 0;font-size:15px;color:#999;background:none;width:200px;height:47px;display:block;float:left;resize:none}
 #main_header #contactbox .buttons{width:290px;margin-top:10px;}
-#main_header #contactbox .buttons button,#main_header #contactbox .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #dd8704;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercas}
+#main_header #contactbox .buttons button,#main_header #contactbox .buttons input[type="submit"]{background:url("../img/icono_circulo_blanco.png") 10px 10px no-repeat #dd8704;border:none;clear:both;color:#fff;cursor:pointer;float:right;font-size:12px;height:40px;margin-right:4px;width:117px;text-transform:uppercase}
 #main_header #contactbox .mensaje span{border-radius:5px;padding:.5em;width:85%}
 #main_header #contactbox .mensaje .ok{background:#435820;border:1px solid #d6e9c6}
 #main_header #contactbox .mensaje .error{background:#f00;border:1px solid #eed3d7}
-#main_header #contactbox #dialog{border-bottom:5px solid $lima;left:520px;width:300px;}
-#main_header #contactbox #dialog h1{color:$lima}
+#main_header #contactbox #dialog{border-bottom:5px solid #435820;left:520px;width:300px;}
+#main_header #contactbox #dialog h1{color:#435820}
 #main_header #contactbox #dialog .close{background:#435820}
 #main_header #contactbox .window{background:#fff;display:none;padding:20px;position:fixed;top:73px;z-index:9999;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
 #main_header #contactbox .window .close{color:#fff;padding:24px 6px 6px 6px;position:absolute;right:10px;text-decoration:none;top:0}
