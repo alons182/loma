@@ -1,4 +1,5 @@
-@import "nib"
+
+@import "prefix-free.styl"
 @import "iconos.styl"
 
 
@@ -71,7 +72,7 @@ img.ac_bgimage
 	background #000 url('../img/loader.gif') no-repeat center center
 	width 50px
 	height 50px
-	border-radius 10px 
+	border-radius 10px
 	z-index 999
 	opacity 0.7
 	display none
@@ -96,9 +97,8 @@ img.ac_bgimage
 		top 0
 		left 20px
 		background rgba(255,255,255,0.8)
-		-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 		box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+		
 	#btn_nav
 		display none
 	#menu
@@ -202,10 +202,8 @@ img.ac_bgimage
 		padding .7em
 		background rgba(255,255,255,0.8)
 		box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		/*-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)*/
 		border 4px dotted $naranja;
+		
 		.icon-loma
 			background url('../img/icon-loma.png') 0 0 no-repeat
 		strong 
@@ -348,10 +346,7 @@ img.ac_bgimage
 			position fixed
 			top 73px
 			z-index 9999
-			-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-			-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-
 			.close
 				color white
 				padding 24px 6px 6px 6px
@@ -396,12 +391,9 @@ img.ac_bgimage
 					cursor pointer
 					background #f9f5f1
 					border-radius 10px
-					-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-					-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 					box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-					background-image -webkit-linear-gradient(top, #f9f5f1 50%, $amarillo 100%)
-					background-image -o-linear-gradient(top, #f9f5f1 50%, $amarillo 100%)
-					background-image linear-gradient(to bottom, #f9f5f1 50%, $amarillo 100%)
+					background-image linear-gradient(top, #f9f5f1 50%, $amarillo 100%)
+					
 
 					span 
 						display block
@@ -412,9 +404,8 @@ img.ac_bgimage
 						text-transform none
 					&:hover, &.on
 						background $naranja
-						background-image -webkit-linear-gradient(top, #fb9114, #c1700b)
-						background-image -o-linear-gradient(top, #fb9114, #c1700b)
-						background-image linear-gradient(to bottom, #fb9114, #c1700b)
+						background-image linear-gradient(top, #fb9114, #c1700b)
+						
 						color #fff
 						text-shadow 0 2px 0 rgba(0, 0, 0, 0.5)
 				
@@ -441,12 +432,9 @@ img.ac_bgimage
 			//text-align center
 			text-decoration none
 			z-index 20
-			-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-			-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			border-radius 10px
-			-moz-border-radius 10px
-			-webkit-border-radius 10px
+			
 
 			span
 				display block
@@ -551,8 +539,6 @@ img.ac_bgimage
 			float left
 			width 420px
 			background  #fff
-			-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-			-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			position relative
 			z-index 1
@@ -688,8 +674,6 @@ img.ac_bgimage
 			background #fff
 			padding 1em
 			width 320px
-			-moz-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-			-webkit-box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 
 			h3
