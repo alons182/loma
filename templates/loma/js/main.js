@@ -1,6 +1,20 @@
 jQuery(function($) {
 
-	            var anim_bulle;
+	/*
+    |--------------------------------------------------------------------------
+    | IE wargnis.
+    |--------------------------------------------------------------------------
+    */
+
+      var ie7 = '<div id="i_explorer">' + '<div id="i_explorer_overlay"></div>' + '<div id="i_explorer_content">' + '<p class="first">Sorry but&hellip;</p>' + '<p>&#8212;This site does not support your Internet Explorer 8 browser.</p>' + '<p>&#8212;I recommend you to upgrade to version 9 by <a href="http://www.microsoft.com/latam/windows/internet-explorer/" target="_blank">clicking here</a> to see the site content.</p>' + '<p>&#8212;Further recommend that you use <a href="http://www.mozilla-europe.org/es/firefox/" target="_blank">Mozilla Firefox</a>  to surf the Internet.</p>' + '<p>&#8212;Thank you :)</p>' + '</div>' + '<div>';
+  if ($.browser.msie && $.browser.version < "9.0") {
+    $("body").append(ie7);
+  }
+    
+        
+
+
+                var anim_bulle;
                 var panel_scroll = null; 
 
                 
