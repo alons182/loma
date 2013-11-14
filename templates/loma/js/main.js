@@ -1,19 +1,5 @@
 jQuery(function($) {
 
-	/*
-    |--------------------------------------------------------------------------
-    | IE warning.
-    |--------------------------------------------------------------------------
-    */
-    debugger;
-      var ie7 = '<div id="i_explorer">' + '<div id="i_explorer_overlay"></div>' + '<div id="i_explorer_content">' + '<p class="first">Sorry but&hellip;</p>' + '<p>&#8212;This site does not support your Internet Explorer 8 browser.</p>' + '<p>&#8212;I recommend you to upgrade to version 9 by <a href="http://www.microsoft.com/latam/windows/internet-explorer/" target="_blank">clicking here</a> to see the site content.</p>' + '<p>&#8212;Further recommend that you use <a href="http://www.mozilla-europe.org/es/firefox/" target="_blank">Mozilla Firefox</a>  to surf the Internet.</p>' + '<p>&#8212;Thank you :)</p>' + '</div>' + '<div>';
-  if ($.browser.msie && $.browser.version < "9.0") {
-    $("body").append(ie7);
-  }
-    
-        
-
-
                 var anim_bulle;
                 var panel_scroll = null; 
 
@@ -528,7 +514,17 @@ jQuery(function($) {
            
 
             
+    /*
+    |--------------------------------------------------------------------------
+    | IE warning.
+    |--------------------------------------------------------------------------
+    */
 
+      var ie7 = '<div id="i_explorer">' + '<div id="i_explorer_overlay"></div>' + '<div id="i_explorer_content">' + '<p class="first">Lo sentimos pero&hellip;</p>' + '<p>&#8212;Este sitio no soporta tu Internet Explorer 8 o 7.</p>' + '<p>&#8212;Te recomiendo actualizar a la version 9 en <a href="http://www.microsoft.com/latam/windows/internet-explorer/" target="_blank">este link</a></p>' + '<p>&#8212;Ademas te recomiendo usar <a href="https://www.google.com/intl/es/chrome/browser/?hl=es" target="_blank">Google Chrome</a> para una mejor experiencia.</p>' + '<p>&#8212;Gracias :)</p>' + '</div>' + '<div>';
+  if ($.browser.msie && $.browser.version < "9.0") {
+    $("body").append(ie7);
+  }
+    
           
 
             

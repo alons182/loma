@@ -119,3 +119,6 @@ function getScrollerWidth() {
     this.selectedIndex = -1;
      });
 }
+
+
+
