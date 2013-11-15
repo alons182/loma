@@ -338,7 +338,47 @@ jQuery(function($) {
             $menu.find('.menu > .item-115 a').prepend('<span class="icon icon-cog"></span>');$menu.find('.menu > .item-115 ').append('<div class="border-item yellow"></div>');
             $menu.find('.menu > .item-116 a').prepend('<span class="icon icon-phone"></span>');$menu.find('.menu > .item-116 ').append('<div class="border-item yellow"></div>');
 
-            $menu.find('.menu > .item-116 .separator').prepend('<span class="icon icon-phone"></span>');
+            $menu.find('.menu > .item-112 .separator').prepend('<span class="icon icon-user"></span>');//$menu.find('.menu > .item-107 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-113 .separator').prepend('<span class="icon icon-stack"></span>');//$menu.find('.menu > .item-108 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-114 .separator').prepend('<span class="icon icon-images"></span>');//$menu.find('.menu > .item-109 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-115 .separator').prepend('<span class="icon icon-cog"></span>');//$menu.find('.menu > .item-110 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-116 .separator').prepend('<span class="icon icon-phone"></span>');//$menu.find('.menu > .item-111 ').append('<div class="border-item yellow"></div>');
+
+           
+
+            
+             $('.menu .divider').on('click',function(){
+                    var item_menu = 1;
+
+                    if( $(this).hasClass('item-107') || $(this).hasClass('item-112') )
+                            item_menu = 3
+                    if( $(this).hasClass('item-109') || $(this).hasClass('item-114') )
+                            item_menu = 4
+                    if( $(this).hasClass('item-110') || $(this).hasClass('item-115') )
+                            item_menu = 5
+                    if( $(this).hasClass('item-111') || $(this).hasClass('item-116') )
+                            return false;
+                    if( $(this).hasClass('item-125') || $(this).hasClass('item-127') )
+                            item_menu = 6
+                    if( $(this).hasClass('item-126') || $(this).hasClass('item-128') )
+                            item_menu = 7
+                   
+
+                   $('.slide:visible').hide();
+
+                    $('#slide_'+ item_menu).fadeIn(400);
+                   
+                    $('.cir_banner').animate({
+                        left:'100%',
+                        opacity:0
+                    }, 0);
+                    $('.cir_banner').animate({
+                        left:'75%',
+                        opacity:1       
+                    }, 800);
+                               
+                              
+            });
 
              $menu.find('.menu .item-116 span').on('click',function(){
        
