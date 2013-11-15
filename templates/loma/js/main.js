@@ -50,13 +50,26 @@ jQuery(function($) {
                                 //hide the loading status image
                                 $ac_loading.hide();
 
-                              
+                               
                                 //MUESTRA EL MENU PROYECTO
                                 $('#menu_proyecto').slideDown(600);
 
                                 initEventsMenu();
                                 // ACTIVACION DEL MENU PROYECTO
-                                $('#menu_proyecto a:first').click();
+                                $('.slide:visible').hide();
+
+                                $('#slide_1').fadeIn(400);
+                                $('.cir_banner').animate({
+                                    left:'100%',
+                                    opacity:0
+                                }, 0);
+                                $('.cir_banner').animate({
+                                    left:'75%',
+                                    opacity:1       
+                                }, 800);
+                               
+                               showItemImage($('#menu_proyecto a:first').attr('data-bg')); 
+                                //$('#menu_proyecto a:first').click();
                                
                            // });
                         });
@@ -118,6 +131,21 @@ jQuery(function($) {
                     
                         /* changes the background image */
                     showItemImage       = function(source) {
+                       
+                        if(source===undefined)
+                         {  
+                                var $itemImage = $('<img src="'+ $ac_bgimage.attr('src') +'" alt="Background" class="ac_bgimage"/>');
+                                $itemImage.insertBefore($ac_bgimage);
+                                adjustImageSize($itemImage);
+                                $ac_bgimage.fadeOut(1500, function() {
+                                    $(this).remove();
+                                    $ac_bgimage = $itemImage;
+                                });
+                                $itemImage.fadeIn(1500);
+                           
+                           return false;
+                           } 
+                      
                             //if its the current one return
                         if($ac_bgimage.attr('src') === source)
                             return false;
@@ -146,6 +174,7 @@ jQuery(function($) {
                     },
                         /* makes an image "fullscreen" and centered */
                     adjustImageSize     = function($img) {
+                        
                         var w_w = $(window).width(),
                         w_h = $(window).height(),
                         r_w = w_h / w_w,
@@ -303,11 +332,13 @@ jQuery(function($) {
             $menu.find('.menu > .item-110 .separator').prepend('<span class="icon icon-cog"></span>');//$menu.find('.menu > .item-110 ').append('<div class="border-item yellow"></div>');
             $menu.find('.menu > .item-111 .separator').prepend('<span class="icon icon-phone"></span>');//$menu.find('.menu > .item-111 ').append('<div class="border-item yellow"></div>');
 
-            $menu.find('.menu > .item-112 a').prepend('<span class="icon icon-user"></span>');
-            $menu.find('.menu > .item-113 a').prepend('<span class="icon icon-stack"></span>');
-            $menu.find('.menu > .item-114 a').prepend('<span class="icon icon-images"></span>');
-            $menu.find('.menu > .item-115 a').prepend('<span class="icon icon-cog"></span>');
-            $menu.find('.menu > .item-116 a').prepend('<span class="icon icon-phone"></span>');
+            $menu.find('.menu > .item-112 a').prepend('<span class="icon icon-user"></span>');$menu.find('.menu > .item-112 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-113 a').prepend('<span class="icon icon-stack"></span>');$menu.find('.menu > .item-113 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-114 a').prepend('<span class="icon icon-images"></span>');$menu.find('.menu > .item-114 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-115 a').prepend('<span class="icon icon-cog"></span>');$menu.find('.menu > .item-115 ').append('<div class="border-item yellow"></div>');
+            $menu.find('.menu > .item-116 a').prepend('<span class="icon icon-phone"></span>');$menu.find('.menu > .item-116 ').append('<div class="border-item yellow"></div>');
+
+            $menu.find('.menu > .item-116 .separator').prepend('<span class="icon icon-phone"></span>');
 
              $menu.find('.menu .item-116 span').on('click',function(){
        
@@ -446,7 +477,7 @@ jQuery(function($) {
 
              function resizes(){
 
-                    height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('.item-page').height()) - ($('#main_footer').height());
+                    height_dispo = getWindowHeight() - ($('#main_header').height()) - ($('#main_footer').height());
                     height_dispo_slider = getWindowHeight(); //- ($('#main_footer').height()); //- ($('#main_header').height()); - ($('.item-page').height()) - ($('#main_footer').height());
                     width_dispo = getWindowWidth() - getScrollerWidth();
 
@@ -497,6 +528,7 @@ jQuery(function($) {
                 } else {
                     // mobile            
                     $('#main').height('auto');
+                    //$('#main .item-page-main-menu').height(height_dispo);
                     $('#main .columna').height('auto').width('auto');
                     $('#main .plan').width('100%');
                     $('#main .map').height('250px').width('100%');
