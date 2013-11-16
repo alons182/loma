@@ -67,6 +67,7 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/main.css');
         </header>
         <div id="main">
             <?php if ($this->countModules('menu_proyecto')) : ?>
+            <div id="btn_nav_proyecto">Proyecto</div>
             <nav id="menu_proyecto">
                 <jdoc:include type="modules" name="menu_proyecto" style="none" />
             </nav>

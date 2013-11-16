@@ -96,6 +96,8 @@ jQuery(function($) {
                            
                            /* user clicks one item : appetizers | main course | desserts | wines | specials */
                             $el_title.bind('click.Menu', function(e) {
+
+
                                   
                                $('.slide:visible').hide();
                               // if($(this).attr('data-target')== 2)
@@ -118,6 +120,7 @@ jQuery(function($) {
                                 }, 800);
                                 
                                 $('#menu_proyecto a').removeClass('on');
+                                 $('#menu_proyecto').hide();
                                 $(this).addClass('on');
                                 current = $(this).attr('data-target');
                                 showItemImage(el_image);
@@ -467,6 +470,10 @@ jQuery(function($) {
             // NAV MOBILE
             $('#btn_nav').click(function(){
                 $('#main_header nav').toggle();
+            });
+            // NAV MOBILE PROYECTO
+            $('#btn_nav_proyecto').click(function(){
+                $('#main nav').toggle();
             });
 /*
 |--------------------------------------------------------------------------

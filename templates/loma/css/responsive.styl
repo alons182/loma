@@ -20,7 +20,7 @@
 
 	#main 
 		#menu_proyecto
-			top 50px
+			top 70px
 			left 20px
 
 		#slider
@@ -44,6 +44,7 @@
 			display block
 			cursor pointer
 			font bold 12px Arial,sans-serif
+
 		#menu 
 			margin-left 0
 			top 70px
@@ -105,7 +106,21 @@
 				
 
 	#main
+		#btn_nav_proyecto
+			position absolute
+			top 36px
+			left 21px
+			padding 7px 10px 8px 30px
+			background $naranja url('../img/flecha_menu.png') 10px 50% no-repeat
+			background-size 12px 9px
+			display block
+			cursor pointer
+			font bold 12px Arial,sans-serif
+			z-index 20
+			color #FFF
+
 		#menu_proyecto
+			display none
 			
 			ul
 				li 
@@ -133,11 +148,16 @@
 		#slider
 			.main-info
 				width 90%
-				top 50%
+				top 17%
 				left 2%
 
 			.cir_banner
+				display none
 				left 55%
+
+			.anuncios-bottom
+				display none
+
 		.franja
 			height 35px
 
