@@ -194,14 +194,15 @@ img.ac_bgimage
 		color $verde
 		position absolute
 		right 175px
-		top 5px
+		top 0px
 		font-size 12px
 		font-weight bold
 		text-align center
-		padding .7em
-		background rgba(255,255,255,0.8)
-		box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
-		border 4px dotted $naranja;
+		z-index 20
+		//padding .7em
+		//background rgba(255,255,255,0.8)
+		//box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
+		//border 4px dotted $naranja;
 		
 		.icon-loma
 			background url('../img/icon-loma.png') 0 0 no-repeat
@@ -440,7 +441,7 @@ img.ac_bgimage
 			position fixed
 			top 15%
 			left 100%
-			background url('../img/bg_anuncio.png') right 0 no-repeat
+			//background url('../img/bg_anuncio.png') right 0 no-repeat
 			width 315px
 			height 96px
 			//padding 35px 20px 30px 22px
@@ -450,8 +451,12 @@ img.ac_bgimage
 			z-index 20
 			box-shadow 0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05)
 			border-radius 10px
-			
 
+			.a1
+				background url('../img/bg_anuncio.png') right 0 no-repeat
+			
+			.a2 
+				background url('../img/bg_anuncio2.png') right 0 no-repeat
 			span
 				display block
 			.h1
@@ -692,6 +697,13 @@ img.ac_bgimage
 					margin 0
 					font-family 'neogothis_adf_stdlight', sans-serif
 					font-size 18px
+	#ubicacion
+		.info-top 
+			padding-left 283px
+		
+		iframe 
+			.ilErfe-e1YmVc-ZMv3u
+				padding-left 290px !important
 	#plano
 		p 
 			font-family 'Muli', sans-serif

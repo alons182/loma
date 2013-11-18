@@ -33,7 +33,7 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main_header #menu ul li .border-item{display:none;height:5px;margin:5px auto 0;width:100%}
 #main_header #menu ul li:hover .border-item{display:block}
 #main_header #menu ul .active .border-item,#main_header #menu ul .active .border-item{display:block;}
-#main_header .info-contacto{font-family:'neogothis_adf_stdregular',sans-serif;color:#435820;position:absolute;right:175px;top:5px;font-size:12px;font-weight:bold;text-align:center;padding:.7em;background:rgba(255,255,255,0.8);-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);border:4px dotted #dd8704;}
+#main_header .info-contacto{font-family:'neogothis_adf_stdregular',sans-serif;color:#435820;position:absolute;right:175px;top:0;font-size:12px;font-weight:bold;text-align:center;z-index:20;}
 #main_header .info-contacto .icon-loma{background:url("../img/icon-loma.png") 0 0 no-repeat}
 #main_header .info-contacto strong{color:#dd8704;font-size:14px}
 #main_header .idiomas{position:absolute;right:20px;top:45px;font-size:12px;}
@@ -70,7 +70,9 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main .item-page-main-menu{width:60%;padding:1em;background:#fff;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);left:25%;top:50px;position:relative;line-height:22px;color:#435820;}
 #main .item-page-main-menu h1{font-family:'neogothis_adf_stdregular',sans-serif;margin:.2em 0;color:#dd8704}
 #main #slider .slide{overflow:hidden;position:relative}
-#main #slider .cir_banner{position:fixed;top:15%;left:100%;background:url("../img/bg_anuncio.png") right 0 no-repeat;width:315px;height:96px;color:#fff;text-decoration:none;z-index:20;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-border-radius:10px;border-radius:10px;}
+#main #slider .cir_banner{position:fixed;top:15%;left:100%;width:315px;height:96px;color:#fff;text-decoration:none;z-index:20;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);-webkit-border-radius:10px;border-radius:10px;}
+#main #slider .cir_banner .a1{background:url("../img/bg_anuncio.png") right 0 no-repeat}
+#main #slider .cir_banner .a2{background:url("../img/bg_anuncio2.png") right 0 no-repeat}
 #main #slider .cir_banner span{display:block}
 #main #slider .cir_banner .h1{font-family:'neogothis_adf_stdbold',sans-serif;font-size:40px;text-transform:uppercase;text-shadow:0 2px 0 rgba(0,0,0,0.5);float:right;margin-top:-15px}
 #main #slider .cir_banner .h2{font-family:'neogothis_adf_stdregular',sans-serif;font-size:16px;color:#f6ef95;text-transform:uppercase}
@@ -110,6 +112,8 @@ img.ac_bgimage{position:fixed;left:0;top:0;width:100%;display:none;z-index:0}
 #main #ubicacion .plan .info-top,#main #plano .plan .info-top,#main #disenos .plan .info-top{background:url("../img/textura_franja.png") 50% 0 repeat;color:#fff;}
 #main #ubicacion .plan .info-top a,#main #plano .plan .info-top a,#main #disenos .plan .info-top a{color:#fff}
 #main #ubicacion .plan .info-top h2,#main #plano .plan .info-top h2,#main #disenos .plan .info-top h2{padding:.6em;margin:0;font-family:'neogothis_adf_stdlight',sans-serif;font-size:18px}
+#main #ubicacion .info-top{padding-left:283px}
+#main #ubicacion iframe .ilErfe-e1YmVc-ZMv3u{padding-left:290px !important}
 #main #plano p{font-family:'Muli',sans-serif;font-size:18px}
 #main #plano .info-lotes{background:#fff;padding:1em;width:320px;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);box-shadow:0 5px 5px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),inset 0 0 1px 1px rgba(255,255,255,0.2),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 2px rgba(0,0,0,0.05);}
 #main #plano .info-lotes h3{margin-top:0;font-family:'Muli',sans-serif;font-size:24px}

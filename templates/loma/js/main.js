@@ -120,7 +120,7 @@ jQuery(function($) {
                                 }, 800);
                                 
                                 $('#menu_proyecto a').removeClass('on');
-                                 $('#menu_proyecto').hide();
+                                // $('#menu_proyecto').hide();
                                 $(this).addClass('on');
                                 current = $(this).attr('data-target');
                                 showItemImage(el_image);
