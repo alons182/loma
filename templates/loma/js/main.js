@@ -383,6 +383,24 @@ jQuery(function($) {
                               
             });
 
+            $('.cir_banner').on('click',function(){
+                    var item_menu = 8;
+                 
+                 $('.slide:visible').hide();
+
+                    $('#slide_'+ item_menu).fadeIn(400);
+                   
+                    $('.cir_banner').animate({
+                        left:'100%',
+                        opacity:0
+                    }, 0);
+                    $('.cir_banner').animate({
+                        left:'75%',
+                        opacity:1       
+                    }, 800);
+
+            });
+
              $menu.find('.menu .item-116 span').on('click',function(){
        
                 if($("#contactbox #dialog").css("display")=="none") 
