@@ -99,7 +99,7 @@ jQuery(function($) {
                             $el_title.bind('click.Menu', function(e) {
 
 
-                               if($posicion_menu == "bgid-108")
+                               if($posicion_menu == "bgid-108" || $posicion_menu == "bgid-113")
                                {
                                     $('.slide:visible').hide();
                                   // if($(this).attr('data-target')== 2)
@@ -129,8 +129,8 @@ jQuery(function($) {
                                     return false;
                                }else
                                   {
-                                    window.location.href = "/";
-                                    
+                                    window.location.href = "/loma/";
+
                                   }  
 
                                
