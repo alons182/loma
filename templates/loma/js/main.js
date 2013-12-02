@@ -17,7 +17,8 @@ jQuery(function($) {
                 $menuItems      = $('#menu_proyecto ul').children('li.sli'),
                 totalItems      = $menuItems.length,
                 $ItemImages     = new Array();
-               
+                $posicion_menu = $.trim($('body').attr('class'));
+                
                 /* 
                 for this menu, we will preload all the images. 
                 let's add all the image sources to an array,
@@ -98,33 +99,41 @@ jQuery(function($) {
                             $el_title.bind('click.Menu', function(e) {
 
 
-                                  
-                               $('.slide:visible').hide();
-                              // if($(this).attr('data-target')== 2)
-                                   // showItemImage($(this).attr('data-bg'));
-                                $('#slide_' + $(this).attr('data-target')).fadeIn(400);
-                                
-                                $('.cir_banner').animate({
-                                    left:'100%',
-                                    opacity:0
-                                }, 0);
-                                $('.cir_banner').animate({
-                                    left:'75%',
-                                    opacity:1       
-                                }, 800);
-                                
-                                clearInterval(anim_bulle);
-                                $('.cir_banner .logo, .cir_banner h2, .cir_banner p').hide();
-                                anim_bulle = setTimeout(function(){
-                                    $('.cir_banner .cir_banner, .cir_banner h2, .cir_banner p').slideDown(600);
-                                }, 800);
-                                
-                                $('#menu_proyecto a').removeClass('on');
-                                // $('#menu_proyecto').hide();
-                                $(this).addClass('on');
-                                current = $(this).attr('data-target');
-                                showItemImage(el_image);
-                                return false;
+                               if($posicion_menu == "bgid-108")
+                               {
+                                    $('.slide:visible').hide();
+                                  // if($(this).attr('data-target')== 2)
+                                       // showItemImage($(this).attr('data-bg'));
+                                    $('#slide_' + $(this).attr('data-target')).fadeIn(400);
+                                    
+                                    $('.cir_banner').animate({
+                                        left:'100%',
+                                        opacity:0
+                                    }, 0);
+                                    $('.cir_banner').animate({
+                                        left:'75%',
+                                        opacity:1       
+                                    }, 800);
+                                    
+                                    clearInterval(anim_bulle);
+                                    $('.cir_banner .logo, .cir_banner h2, .cir_banner p').hide();
+                                    anim_bulle = setTimeout(function(){
+                                        $('.cir_banner .cir_banner, .cir_banner h2, .cir_banner p').slideDown(600);
+                                    }, 800);
+                                    
+                                    $('#menu_proyecto a').removeClass('on');
+                                    // $('#menu_proyecto').hide();
+                                    $(this).addClass('on');
+                                    current = $(this).attr('data-target');
+                                    showItemImage(el_image);
+                                    return false;
+                               }else
+                                  {
+                                    window.location.href = "/";
+                                    
+                                  }  
+
+                               
                             });
                             /* closes the submenu */
                            
