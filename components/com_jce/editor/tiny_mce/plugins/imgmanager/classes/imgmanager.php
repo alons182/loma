@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -54,13 +54,19 @@ final class WFImageManagerPlugin extends WFMediaManager {
         $document->addScriptDeclaration('ImageManagerDialog.settings=' . json_encode($this->getSettings()) . ';');
     }
 
-    function onUpload($file, $relative = '') {
+    function onUpload($file, $relative = '', $method = '') {
         $browser = $this->getBrowser();
         $filesystem = $browser->getFileSystem();
 
         $params = $this->getParams();
 
-        if (JRequest::getWord('method') === 'dragdrop') {
+        // get method (with bc check)
+        if (empty($method)) {
+            $method = JRequest::getWord('method', '');
+        }
+
+        // dialog/form upload
+        if ($method == 'inline' || $method == 'dragdrop') {
             $result = array(
                 'file' => $relative,
                 'name' => basename($relative)

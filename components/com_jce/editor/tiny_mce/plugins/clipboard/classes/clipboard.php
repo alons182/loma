@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -22,14 +22,22 @@ class WFClipboardPlugin extends WFEditorPlugin
 		parent::display();
 
 		$document = WFDocument::getInstance();
+                
+                // get command, eg: mcePaste, mcePasteText
+                $cmd = JRequest::getCmd('cmd', 'paste');
+                
+                // remove mce prefix
+                $cmd = str_replace('mce', '', $cmd);
+                
+                // set title
+                $document->setTitle(WFText::_('WF_' . strtoupper($cmd) . '_TITLE'));
 
 		$document->addScript(array('clipboard'), 'plugins');
 		$document->addStyleSheet(array('clipboard'), 'plugins');
 	}
 	
-	function getSettings()
-	{
-		$settings = array();		
+	public function getSettings($settings = array())
+	{		
 		return parent::getSettings($settings);
 	}
 }

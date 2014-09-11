@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -16,25 +16,27 @@ class WFSpellcheckerPluginConfig {
                 
                 $engine = $wf->getParam('spellchecker.engine', 'browser', 'browser');
                 
-                $url = JURI::base(true).'/index.php?option=com_jce&view=editor&layout=plugin&plugin=spellchecker&component_id=' . $settings['component_id'];
+                //$url = JURI::base(true).'/index.php?option=com_jce&view=editor&layout=plugin&plugin=spellchecker&component_id=' . $settings['component_id'];
                 
                 switch($engine) {
                     default:
                     case 'browser':
+                    case 'googlespell':
                         $languages = '';
                         
                         $settings['spellchecker_browser_state'] = $wf->getParam('spellchecker.browser_state', 0, 0);
                         
+                        $engine = 'browser';
+                        
                         break;
-                    case 'googlespell':
+                    /*case 'googlespell':
                         $languages = $wf->getParam('spellchecker.googlespell_languages', '');
                         
                         // use a default
                         if (!$languages) {
                             $languages = $wf->getParam('spellchecker.languages', 'English=en', '' );
                         }
-
-                        break;
+                        break;*/
                     case 'pspell':
                     case 'pspellshell':
                     case 'enchantspell':
@@ -42,7 +44,7 @@ class WFSpellcheckerPluginConfig {
                         break;
                 }
                 
-                $settings['spellchecker_rpc_url'] = $url;
+                //$settings['spellchecker_rpc_url'] = $url;
                 
                 // cast as array
                 if ($languages) {
@@ -54,6 +56,7 @@ class WFSpellcheckerPluginConfig {
                 }
 
 		$settings['spellchecker_engine'] = $engine;
+                $settings['spellchecker_suggestions'] = $wf->getParam('spellchecker.suggestions', 1, 1);
 	}
 }
 ?>

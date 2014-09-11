@@ -7,12 +7,13 @@
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>tech@reumer.net</authorEmail>
 	<authorUrl>tech.reumer.net</authorUrl>
-	<version>3.1</version>
+	<version>3.2</version>
 	<description>PLUGIN_GOOGLE_MAP3_INSTALLATION</description>
 	<files>
 		<filename plugin="plugin_googlemap3">plugin_googlemap3.php</filename>
 		<filename>plugin_googlemap3_helper.php</filename>
-		<filename>plugin_googlemap3_proxy.php</filename>
+		<filename>plugin_googlemap3.css.php</filename>
+		<filename>plugin_googlemap3_kmlprxy.php</filename>
 		<filename>plugin_googlemap3_twitter_kml.php</filename>
 		<filename>plugin_googlemap3_OAuth.php</filename>
 		<filename>plugin_googlemap3_twitteroauth.php</filename>
@@ -52,7 +53,7 @@
 					<option value="[">[]</option>
 					<option value="both">GOOGLEMAPS_BRACKETS_BOTH</option>
 				</field>
-				<field name="Google_API_version" type="text" size= "5" default="3.x" export='0' label="GOOGLEMAPS_GOOGLEAPIVERSION" description="GOOGLEMAPS_TT_GOOGLEAPIVERSION" />
+				<field name="Google_API_version" type="text" size= "5" default="3" export='0' label="GOOGLEMAPS_GOOGLEAPIVERSION" description="GOOGLEMAPS_TT_GOOGLEAPIVERSION" />
 				<field name="visualrefresh" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAP_VISUALREFRESH" description="GOOGLEMAPS_TT_VISUALREFRESH">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
@@ -486,6 +487,56 @@
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
+				<field name="panominzoom" type="list" size= "1" default="none" export='1' label="GOOGLEMAPS_MAPS_PANOMINZOOM" description="GOOGLEMAPS_TT_MAPS_PANOMINZOOM">
+					<option value="none">GOOGLEMAPS_MAPS_PANOZOOMNONE</option>
+					<option value="21">21</option>
+					<option value="20">20</option>
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
+				<field name="panomaxzoom" type="list" size= "1" default="none" export='1' label="GOOGLEMAPS_MAPS_PANOMAXZOOM" description="GOOGLEMAPS_TT_MAPS_PANOMAXZOOM">
+					<option value="none">GOOGLEMAPS_MAPS_PANOZOOMNONE</option>
+					<option value="21">21</option>
+					<option value="20">20</option>
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
 				<field name="pano_userid" type="text" size="8" default="" export='1' label="GOOGLEMAPS_MAPS_PANOUSERID" description="GOOGLEMAPS_TT_MAPS_PANOUSERID" />
 				<field name="pano_tag" type="text" size="40" default="" export='1' label="GOOGLEMAPS_MAPS_PANOTAG" description="GOOGLEMAPS_TT_MAPS_PANOTAG" />
 				<field name="weather" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_WEATHER" description="GOOGLEMAPS_TT_MAPS_WEATHER">
@@ -677,6 +728,7 @@
 			</fieldset>
 			<fieldset name="GOOGLEMAP_STREETVIEW">
 				<field name="sv" type="text" size="40" default="none" export='1' label="GOOGLEMAPS_MAPS_SV" description="GOOGLEMAPS_TT_MAPS_SV" />
+				<field name="svpano" type="text" size="60" default="" export='1' label="GOOGLEMAPS_MAPS_SVPANO" description="GOOGLEMAPS_TT_MAPS_SVPANO" />
 				<field name="svwidth" type="text" size= "10" default="100%" export='1' label="GOOGLEMAPS_MAPS_SVWIDTH" description="GOOGLEMAPS_TT_MAPS_SVWIDTH" />
 				<field name="svheight" type="text" size= "10" default="300" export='1' label="GOOGLEMAPS_MAPS_SVHEIGHT" description="GOOGLEMAPS_TT_MAPS_SVHEIGHT" />
 				<field name="svyaw" type="text" size= "10" default="0" export='1' label="GOOGLEMAPS_MAPS_SVYAW" description="GOOGLEMAPS_TT_MAPS_SVYAW" />
@@ -801,7 +853,7 @@
 				<field name="kmlmarkerlabelclass" type="text" size= "40" default="" export='1' label="GOOGLEMAPS_MAPS_LABELCLASSMARKER" description="GOOGLEMAPS_TT_MAPS_LABELCLASSMARKER" />
 				<field name="kmlpolylabel" type="text" size= "3" default="100" export='1' label="GOOGLEMAPS_MAPS_LABELOPACITYPOLYGON" description="GOOGLEMAPS_TT_MAPS_LABELOPACITYPOLYGON" />
 				<field name="kmlpolylabelclass" type="text" size= "40" default="" export='1' label="GOOGLEMAPS_MAPS_LABELCLASSPOLYGON" description="GOOGLEMAPS_TT_MAPS_LABELCLASSPOLYGON" />
-				<field name="proxy" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_KMLPROXY" description="GOOGLEMAPS_TT_MAPS_KMLPROXY">
+				<field name="proxy" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLPROXY" description="GOOGLEMAPS_TT_MAPS_KMLPROXY">
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 				</field>

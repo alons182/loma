@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -131,9 +131,8 @@ final class WFRequest extends JObject {
 
             if ($json) {                
                 // remove slashes
-                if (get_magic_quotes_gpc()) {
-                    $json = stripslashes($json);
-                }
+                $json = stripslashes($json);
+                
                 // convert to JSON object
                 $json = json_decode($json);
                 

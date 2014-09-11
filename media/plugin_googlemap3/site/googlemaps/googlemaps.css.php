@@ -49,6 +49,8 @@ if (!file_exists(JPATH_LIBRARIES . '/import.legacy.php')) {
 	require_once ( JPATH_BASE.'/includes/framework.php' );
 	/* To use Joomla's Database Class */
 	require_once ( JPATH_BASE.'/libraries/joomla/factory.php' );
+	if (!defined('JVERSION'))
+		@define( 'JVERSION', "1.5" );
 	$mainframe = JFactory::getApplication('site');
 	$mainframe->initialise();
 	$user = JFactory::getUser();
@@ -60,6 +62,14 @@ if (!file_exists(JPATH_LIBRARIES . '/import.legacy.php')) {
 	 */
 	require_once JPATH_BASE . '/configuration.php';
 	require_once JPATH_LIBRARIES . '/import.legacy.php';
+	if (!defined('JVERSION'))
+		@define( 'JVERSION', "2.5" );
+	if (!defined('JDEBUG'))
+		@define( 'JDEBUG', '0' );
+	$mainframe = JFactory::getApplication('site');
+	$mainframe->initialise();
+	$user = JFactory::getUser();
+	$session = JFactory::getSession();
 }
 
 class plugin_googlemap3_css {

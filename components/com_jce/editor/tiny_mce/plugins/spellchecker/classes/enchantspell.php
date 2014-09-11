@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -35,7 +35,7 @@ class EnchantSpell extends SpellChecker {
 			return $returnData;
 			enchant_broker_free_dict($d);
 		} else {
-
+                    $this->throwError("Language not installed");
 		}
 		enchant_broker_free($r);
 	}
@@ -57,7 +57,7 @@ class EnchantSpell extends SpellChecker {
 
 			enchant_broker_free_dict($d);
 		} else {
-
+                    $this->throwError("Language not installed");
 		}
 		enchant_broker_free($r);
 

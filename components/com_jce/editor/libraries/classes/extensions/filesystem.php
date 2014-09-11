@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -116,7 +116,7 @@ class WFFileSystem extends WFExtension {
                     // Joomla! 2.5?
                     if (is_int($group_id)) {
                         // usergroup table				
-                        $group = JTable::getInstance('Usergroup', 'JTable');
+                        $group = JTable::getInstance('Usergroup');
                         $group->load($group_id);
                         // usertype	
                         $usertype = $group->title;
@@ -128,15 +128,21 @@ class WFFileSystem extends WFExtension {
                 }
 
                 // Replace any path variables
-                $pattern = array('/\$id/', '/\$username/', '/\$usertype/', '/\$(group|profile)/', '/\$day/', '/\$month/', '/\$year/');
+                $pattern = array('/\$id/', '/\$username/', '/\$user(group|type)/', '/\$(group|profile)/', '/\$day/', '/\$month/', '/\$year/');
                 $replace = array($user->id, $user->username, $usertype, $profile->name, date('d'), date('m'), date('Y'));
                 $root = preg_replace($pattern, $replace, $root);
 
                 // split into path parts to preserve /
                 $parts = explode('/', $root);
+                
+                $textcase = $wf->getParam('editor.websafe_textcase');
+                
+                if (!empty($textcase)) {
+                    $textcase = array_shift($textcase);
+                }
 
                 // clean path parts
-                $parts = WFUtility::makeSafe($parts, $wf->getParam('editor.websafe_mode', 'utf-8'), $wf->getParam('editor.websafe_allow_spaces', 0));
+                $parts = WFUtility::makeSafe($parts, $wf->getParam('editor.websafe_mode', 'utf-8'), $wf->getParam('editor.websafe_allow_spaces', 0), $textcase);
 
                 //join path parts
                 $root = implode('/', $parts);

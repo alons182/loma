@@ -311,6 +311,8 @@ class plgSystemPlugin_googlemap3_helper
 		$this->_mp->txt_avhighways = $this->_translate($this->_mp->txt_avhighways, $this->_mp->lang);
 		$this->_mp->txt_avtoll = $this->_translate($this->_mp->txt_avtoll, $this->_mp->lang);
 		$this->_mp->txt_walking = $this->_translate($this->_mp->txt_walking, $this->_mp->lang);
+		$this->_mp->txt_bicycle = $this->_translate($this->_mp->txt_bicycle, $this->_mp->lang);
+		$this->_mp->txt_transit = $this->_translate($this->_mp->txt_transit, $this->_mp->lang);
 		$this->_mp->txt_optimize = $this->_translate($this->_mp->txt_optimize, $this->_mp->lang);
 		$this->_mp->txt_alternatives = $this->_translate($this->_mp->txt_alternatives, $this->_mp->lang);
 		$this->_langanim = $this->_translate($this->langanim, $this->_mp->lang);
@@ -402,6 +404,7 @@ class plgSystemPlugin_googlemap3_helper
 			$url .= "&twitterline=".urlencode($this->_mp->twitterline);
 			$url .= "&twitterlinewidth=".urlencode($this->_mp->twitterlinewidth);
 			$url .= "&twitterstartloc=".urlencode($this->_mp->twitterstartloc);
+			$url .= "&".JSession::getFormToken()."=1";
 			
 			$this->_mp->kml[] = $url;
 			unset($url, $this->_mp->twittername, $this->_mp->twittertweets, $this->_mp->twittericon, $this->_mp->twitterline, $this->_mp->twitterlinewidth, $this->_mp->twitterstartloc);
@@ -491,17 +494,18 @@ class plgSystemPlugin_googlemap3_helper
 		$this->_debug_log("Memory Usage End: " . $endmem . " KB (".$diffmem." KB)");
 
 		// Add code to text
-		$code = "\n<!-- Plugin Google Maps version 3.1 by Mike Reumer ".(($this->debug_text!='')?$this->debug_text."\n":"")."-->".$code;
+		$code = "\n<!-- Plugin Google Maps version 3.2 by Mike Reumer ".(($this->debug_text!='')?$this->debug_text."\n":"")."-->".$code;
 
 		// Clean up debug text for next _process
 		$this->debug_text = '';
 		
 		// Depending of show place the code at end of page or on the {mosmap} position		
-		if ($this->_mp->show==0) {
-			$offset = strpos($this->_text, $match);
+		$offset = strpos($this->_text, $match);
 
-			// Removed the -1 in first peace of text.
-			$this->_text = substr($this->_text, 0, $match_offset).preg_replace('/'.preg_quote($match, '/').'/', $lbcode, substr($this->_text,$match_offset), 1);
+		if ($this->_mp->show==0) {
+
+			// Removed the -1 in first piece of text.
+			$this->_text = substr($this->_text, 0, $offset).preg_replace('/'.preg_quote($match, '/').'/', $lbcode, substr($this->_text,$offset), 1);
 
 			// If pagebreak add code before pagebreak
 			preg_match($this->pagebreak, $this->_text, $m, PREG_OFFSET_CAPTURE, $offset);
@@ -514,7 +518,7 @@ class plgSystemPlugin_googlemap3_helper
 			else
 				$this->_text .= $code;
 		} else
-			$this->_text = substr($this->_text, 0, $match_offset).preg_replace('/'.preg_quote($match, '/').'/', $code, substr($this->_text,$match_offset), 1);
+			$this->_text = substr($this->_text, 0, $offset).preg_replace('/'.preg_quote($match, '/').'/', $code, substr($this->_text,$offset), 1);
 
 		// Clean up generated variables
 		unset($startmem, $endmem, $diffmem, $offset, $lbcode, $m, $offsetpagebreak, $code);
@@ -607,15 +611,15 @@ class plgSystemPlugin_googlemap3_helper
 		if ($this->_mp->kmlrenderer=='geoxml') {
 			if ($this->_mp->proxy=="1") {
 				if (substr($this->jversion,0,3)=="1.5")
-					$code .= "\nvar proxy = '".$this->base."/plugins/system/plugin_googlemap3_proxy.php?';";
+					$code .= "\nvar proxy = '".$this->base."/plugins/system/plugin_googlemap3_kmlprxy.php?';";
 				else
-					$code .= "\nvar proxy = '".$this->base."/plugins/system/plugin_googlemap3/plugin_googlemap3_proxy.php?';";
+					$code .= "\nvar proxy = '".$this->base."/plugins/system/plugin_googlemap3/plugin_googlemap3_kmlprxy.php?';";
 			}
 			$code.="\ntop.publishdirectory = '".$this->base."/media/plugin_googlemap3/site/geoxmlv3/';";
 		}
 		
-		if ($this->_mp->visualrefresh=="1") {
-			$code.= "\ngoogle.maps.visualRefresh = true;";
+		if ($this->_mp->visualrefresh=="0") {
+			$code.= "\ngoogle.maps.visualRefresh = false;";
 			unset($this->_mp->visualrefresh);
 		}
 
@@ -725,7 +729,10 @@ class plgSystemPlugin_googlemap3_helper
 			$url = $this->base."/media/plugin_googlemap3/site/googlemaps/googlemapsv3.js";
 			$this->_addscript($url);
 			if ($this->mapcss!='') {
-				$url = $this->base."/media/plugin_googlemap3/site/googlemaps/googlemaps.css.php";
+				if (substr($this->jversion,0,3)=="1.5")
+					$url = $this->base."/plugins/system/plugin_googlemap3.css.php";
+				else
+					$url = $this->base."/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php";
 				$this->_addstylesheet($url);
 			}
 			$this->first_googlemaps=false;
@@ -1025,17 +1032,19 @@ class plgSystemPlugin_googlemap3_helper
 	}
 
 	function _processMapv3_kml() {
-
+		// Rename parameter so they can be used by geoxml
+		$this->_mp->geoxmloptions = new stdClass();
+		
 		// Change kml url if proxy is used
 		if ($this->_mp->proxy=='1') {
+			$this->_mp->geoxmloptions->token = JSession::getFormToken();
+			$this->_mp->geoxmloptions->id = $this->id;
+			
 			foreach ($this->_mp->kml as $idx=>$val) {
 				$this->_mp->kml[$idx] = $this->_make_absolute($val);
 			}
 		}
 
-		// Rename parameter so they can be used by geoxml
-		$this->_mp->geoxmloptions = new stdClass();
-		
 		// Set the style of the title of placemark to empty
 		$this->_mp->geoxmloptions->titlestyle = ' class=kmlinfoheader ';
 		$this->_mp->geoxmloptions->descstyle = ' class=kmlinfodesc ';
@@ -1573,12 +1582,6 @@ class plgSystemPlugin_googlemap3_helper
 
 		if ($this->langtype == 'site') {
 			$lang = $this->lang->getTag();
-			$this->_debug_log("Joomla lang: ".$lang);
-			// Chinese and portugal use full iso code to indicate language
-			if (!($lang=='zh'||$lang=='pt')) {
-				$locale_parts = explode('-', $this->lang->getTag());
-				$lang = $locale_parts[0];
-			}
 			$this->_debug_log("site lang: ".$lang);
 		} else if ($this->langtype == 'config') {
 			$lang = $this->params->get( 'lang', '' );

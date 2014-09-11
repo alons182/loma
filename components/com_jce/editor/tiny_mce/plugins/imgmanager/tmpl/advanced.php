@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -61,6 +61,6 @@ defined( '_JEXEC' ) or die('RESTRICTED');
 
             <tr>
                 <td><label for="longdesc" class="hastip" title="<?php echo WFText::_('WF_LABEL_LONGDESC_DESC');?>"><?php echo WFText::_('WF_LABEL_LONGDESC');?></label></td>
-                <td><input id="longdesc" type="text" value="" class="browser image" /></td>
+                <td><input id="longdesc" type="text" value="" class="browser" /></td>
             </tr>
         </table>

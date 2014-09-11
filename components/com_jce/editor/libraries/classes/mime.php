@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -51,7 +51,7 @@ abstract class WFMimeType {
         'application/octet-stream' => 'bin dms lha lrf lzh so iso dmg dist distz pkg bpk dump elc deploy',
         'application/oda' => 'oda',
         'application/oebps-package+xml' => 'opf',
-        'application/ogg' => 'ogx',
+        'application/ogg' => 'ogx ogg ogv oga',
         'application/onenote' => 'onetoc onetoc2 onetmp onepkg',
         'application/patch-ops-error+xml' => 'xer',
         'application/pdf' => 'pdf',
@@ -627,7 +627,7 @@ abstract class WFMimeType {
         'video/mj2' => 'mj2 mjp2',
         'video/mp4' => 'mp4 mp4v mpg4',
         'video/mpeg' => 'mpeg mpg mpe m1v m2v',
-        'video/ogg' => 'ogv',
+        'video/ogg' => 'ogg ogv',
         'video/quicktime' => 'qt mov',
         'video/vnd.fvt' => 'fvt',
         'video/vnd.mpegurl' => 'mxu m4u',

@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -21,7 +21,7 @@ defined('_JEXEC') or die('RESTRICTED');
 class WFEditor extends JObject {
 
     // Editor version
-    protected $_version = '2.3.3.2';
+    protected $_version = '2.4.2';
     
     // Editor instance 
     protected static $instance;
@@ -144,7 +144,7 @@ class WFEditor extends JObject {
                 }
 
                 // check component
-                if ($item->components && in_array($option, explode(',', $item->components)) === false) {
+                if ($option !== 'com_jce' && $item->components && in_array($option, explode(',', $item->components)) === false) {
                     continue;
                 }
 
@@ -173,6 +173,12 @@ class WFEditor extends JObject {
                         continue;
                     }
                 }
+                // decrypt params
+                if (!empty($item->params)) {
+                    wfimport('admin.helpers.encrypt');
+                    $item->params = WFEncryptHelper::decrypt($item->params);
+                }
+                
                 // assign item to profile
                 self::$profile = $item;
                 
@@ -236,38 +242,54 @@ class WFEditor extends JObject {
         if ($plugin) {
             $options['plugin'] = $plugin;
         }
-
+        
         $signature = serialize($options);
 
         if (empty(self::$params[$signature])) {
             wfimport('admin.helpers.extension');
-            // get component
-            $component = WFExtensionHelper::getComponent();
-
+            
+            // get plugin
+            $editor_plugin = WFExtensionHelper::getPlugin();
+            
             // get params data for this profile
             $profile = $this->getProfile($plugin);
 
-            $profile_params = array();
-            $component_params = array();
+            $profile_params  = array();
+            $editor_params   = array();
 
-            if (!empty($component->params)) {
-                $component_params = json_decode($component->params, true);
-                // set null as array
-                if (!$component_params) {
-                    $component_params = array();
+            // get params from editor plugin
+            if ($editor_plugin->params && $editor_plugin->params !== "{}") {
+                $editor_params['editor'] = json_decode($editor_plugin->params, true);
+            } else {
+                // get component
+                $component = WFExtensionHelper::getComponent();
+                
+                // get params from component "params" field (legacy)
+                if ($component->params && $component->params !== "{}") {
+                    $data = json_decode($component->params, true);
+
+                    if (isset($data['editor'])) {
+                        $editor_params['editor'] = $data['editor'];
+                    }
                 }
             }
 
             if ($profile) {
                 $profile_params = json_decode($profile->params, true);
-                // set null as array
-                if (!$profile_params) {
-                    $profile_params = array();
-                }
             }
-
+            
+            // make sure we have an empty array if null or false
+            if (empty($editor_params)) {
+                $editor_params = array();
+            }
+            
+            // make sure we have an empty array if null or false
+            if (empty($profile_params)) {
+                $profile_params = array();
+            }
+            
             // merge data and convert to json string
-            $data = WFParameter::mergeParams($component_params, $profile_params);
+            $data = WFParameter::mergeParams($editor_params, $profile_params);
 
             self::$params[$signature] = new WFParameter($data, $options['path'], $options['key']);
         }

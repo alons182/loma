@@ -2,7 +2,7 @@
 
 /**
  * @copyright      Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * Copyright (C) 2006 - 2013 Ryan Demmer. All rights reserved
+ * Copyright (C) 2006 - 2014 Ryan Demmer. All rights reserved
  * @@license@@
  */
 defined('_JEXEC') or die;
@@ -26,14 +26,14 @@ class plgQuickiconJcefilebrowser extends JPlugin {
      */
     public function __construct(& $subject, $config) {
         parent::__construct($subject, $config);
-        
+
         $app = JFactory::getApplication();
-        
+
         // only in Admin and only if the component is enabled
         if ($app->isSite() || JComponentHelper::getComponent('com_jce', true)->enabled === false) {
             return;
         }
-        
+
         $this->loadLanguage();
     }
 
@@ -50,14 +50,14 @@ class plgQuickiconJcefilebrowser extends JPlugin {
      * @since       2.5
      */
     public function onGetIcons($context) {
-        @include_once(JPATH_ADMINISTRATOR.'/components/com_jce/models/model.php');
-        
+        @include_once(JPATH_ADMINISTRATOR . '/components/com_jce/models/model.php');
+
         // check for class to prevent fatal errors
         if (!class_exists('WFModel')) {
             return;
         }
-        
-        if ($context != $this->params->get('context', 'mod_quickicon') || WFModel::authorize('browser') === false) {            
+
+        if ($context != $this->params->get('context', 'mod_quickicon') || WFModel::authorize('browser') === false) {
             return;
         }
 
@@ -82,14 +82,24 @@ class plgQuickiconJcefilebrowser extends JPlugin {
         );
 
         require_once(JPATH_ADMINISTRATOR . '/components/com_jce/helpers/browser.php');
-
-        return array(array(
-                'link' => WFBrowserHelper::getBrowserLink('', $filter),
-                'image' => 'header/icon-48-media.png',
+        
+        $version = new JVersion;
+        $icon = $version->isCompatible('3.0') ? 'pictures' : 'header/icon-48-media.png';
+        
+        $link = WFBrowserHelper::getBrowserLink('', $filter);
+        
+        if ($link) {
+            return array(array(
+                'link' => $link,
+                'image' => $icon,
+                'icon' => 'pictures',
                 'access' => array('jce.browser', 'com_jce'),
                 'text' => JText::_('WF_QUICKICON_BROWSER'),
                 'id' => 'plg_quickicon_jcefilebrowser'
-                ));
+            ));
+        }
+
+        return array();
     }
 
 }

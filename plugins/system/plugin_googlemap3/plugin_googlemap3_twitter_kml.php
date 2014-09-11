@@ -10,6 +10,30 @@
 # Documentation: http://tech.reumer.net/Google-Maps/Documentation-of-plugin-Googlemap/
 --------------------------------------------------------------------------*/
 
+// Restrict access to own domain
+if ($_SERVER['SERVER_PORT'] == 443)
+	$protocol = "https://";
+else
+	$protocol = "http://";
+
+// No check if the referer is the website, because it can be used by Google servers too.
+
+//header('Access-Control-Allow-Origin: '.$protocol.$_SERVER['SERVER_NAME']);
+//header('Access-Control-Allow-Credentials: true');
+//header('Access-Control-Allow-Methods: GET');
+//
+//if (array_key_exists('HTTP_ORIGIN', $_SERVER))
+//	$origin = $_SERVER['HTTP_ORIGIN'];
+//else 
+//	$origin = "";
+//$pattern = "/(www.)?".$_SERVER['SERVER_NAME']."/i";
+//if ($origin!=""&&preg_match($pattern, $origin)==0)
+//	die( 'Restricted access' );
+//
+//$refering=parse_url($_SERVER['HTTP_REFERER']);
+//if($refering['host']!=$_SERVER['SERVER_NAME'])
+//	die( 'Restricted access' );
+
 @define('_JEXEC', 1);
 if (!defined('DS'))
 	@define( 'DS', DIRECTORY_SEPARATOR );
@@ -39,25 +63,17 @@ if (!defined('JPATH_BASE'))
 }
 
 require_once ( JPATH_BASE.'/includes/defines.php' );
- 
-if (!file_exists(JPATH_LIBRARIES . '/import.legacy.php')) {
-	// Joomla 1.5
-	require_once ( JPATH_BASE.'/includes/framework.php' );
-	/* To use Joomla's Database Class */
-	require_once ( JPATH_BASE.'/libraries/joomla/factory.php' );
-	$mainframe = JFactory::getApplication('site');
-	$mainframe->initialise();
-	$user = JFactory::getUser();
-	$session = JFactory::getSession();
-} else {
-	// Joomla 1.6.x/1.7.x/2.5.x
-	/**
-	 * Import the platform. This file is usually in JPATH_LIBRARIES 
-	 */
-	require_once JPATH_BASE . '/configuration.php';
-	require_once JPATH_LIBRARIES . '/import.legacy.php';
-}
- 
+require_once ( JPATH_BASE.'/includes/framework.php' );
+/* To use Joomla's Database Class */
+require_once ( JPATH_BASE.'/libraries/joomla/factory.php' );
+$mainframe = JFactory::getApplication('site');
+$mainframe->initialise();
+$user = JFactory::getUser();
+$session = JFactory::getSession();
+
+// No check if the referer is the website, because it can be used by Google servers too.
+//JSession::checkToken( 'get' ) or die( 'Invalid Token' );
+
 class Twitter {
 	private $user = null;
 	private $tweets = null;
@@ -177,23 +193,43 @@ class plugin_googlemap3_twitter_kml
 			$twitteraccesstoken = $params->get('twitteraccesstoken', '');
 			$twitteraccesstokensecret = $params->get('twitteraccesstokensecret', '');
 			
-			$twittername = urldecode(JRequest::getVar('twittername', ''));
+			$twittername = JRequest::getVar('twittername', '');
+			if (!is_string($twittername))
+				$twittername ="";
+			else
+				$twittername = urldecode($twittername);
 			if ($twittername=="")
 				$twittername = $params->get('twittername', '');
 				
-			$twittertweets = urldecode(JRequest::getVar('twittertweets', ''));
+			$twittertweets = JRequest::getVar('twittertweets', '');
+			if (!is_string($twittertweets))
+				$twittertweets ="";
+			else
+				$twittertweets = urldecode($twittertweets);
 			if ($twittertweets=="")
 				$twittertweets = $params->get('twittertweets', '15');
 				
-			$line = urldecode(JRequest::getVar('twitterline', ''));
+			$line = JRequest::getVar('twitterline', '');
+			if (!is_string($line))
+				$line ="";
+			else
+				$line = urldecode($line);
 			if ($line=="")
 				$line = $params->get('twitterline', '');
 				
-			$twitterlinewidth = urldecode(JRequest::getVar('twitterlinewidth', ''));
+			$twitterlinewidth = JRequest::getVar('twitterlinewidth', '');
+			if (!is_string($twitterlinewidth))
+				$twitterlinewidth ="";
+			else
+				$twitterlinewidth = urldecode($twitterlinewidth);
 			if ($twitterlinewidth=="")
 				$twitterlinewidth = $params->get('twitterlinewidth', '5');
 
-			$twitterstartloc = urldecode(JRequest::getVar('twitterstartloc', ''));
+			$twitterstartloc = JRequest::getVar('twitterstartloc', '');
+			if (!is_string($twitterstartloc))
+				$twitterstartloc ="";
+			else
+				$twitterstartloc = urldecode($twitterstartloc);
 			if ($twitterstartloc=="")
 				$twitterstartloc = $params->get('twitterstartloc', '5');
 				

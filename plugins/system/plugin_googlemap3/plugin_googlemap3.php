@@ -451,6 +451,16 @@ class plgSystemPlugin_googlemap3 extends JPlugin
 			return;
 		}
 
+		if (substr($this->jversion,0,3)=="1.5")
+			$dir = JPATH_SITE."/plugins/system/";
+		else
+			$dir = JPATH_SITE."/plugins/system/plugin_googlemap3/";
+
+		if (file_exists($dir.'plugin_googlemap3_proxy.php')) {
+			jimport('joomla.filesystem.file');
+			JFile::delete($dir.'plugin_googlemap3_proxy.php');			
+		}
+
 		if ($this->params->get( 'publ', '' )=='') {
 			$database  = JFactory::getDBO();
 			if (substr($this->jversion,0,3)=="1.5")

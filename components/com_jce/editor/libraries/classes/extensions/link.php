@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -19,9 +19,7 @@ class WFLinkExtension extends WFExtension {
      */
 
     private $extensions = array();
-    
     protected static $instance;
-    
     protected static $links = array();
 
     /**
@@ -42,7 +40,7 @@ class WFLinkExtension extends WFExtension {
         $request = WFRequest::getInstance();
         $request->setRequest(array($this, 'getLinks'));
     }
-    
+
     public static function getInstance($config = array()) {
         if (!isset(self::$instance)) {
             self::$instance = new WFLinkExtension($config);
@@ -90,20 +88,20 @@ class WFLinkExtension extends WFExtension {
             $view->display();
         }
     }
-    
+
     private static function cleanInput($args, $method = 'string') {
         $filter = JFilterInput::getInstance();
-        
-        foreach($args as $k => $v) {
+
+        foreach ($args as $k => $v) {
             $args->$k = $filter->clean($v, $method);
         }
-        
+
         return $args;
     }
 
-    public function getLinks($args) {        
+    public function getLinks($args) {
         $args = self::cleanInput($args, 'cmd');
-        
+
         foreach ($this->extensions as $extension) {
             if (in_array($args->option, $extension->getOption())) {
                 $items = $extension->getLinks($args);
@@ -137,8 +135,11 @@ class WFLinkExtension extends WFExtension {
         $wf = WFEditorPlugin::getInstance();
 
         $query = $db->getQuery(true);
-        
+
         $where = array();
+        
+        $version    = new JVersion();
+        $language   = $version->isCompatible('3.0') ? ', language' : '';
 
         if (method_exists('JUser', 'getAuthorisedViewLevels')) {
             $where[] = 'parent_id = ' . (int) $parent;
@@ -152,14 +153,14 @@ class WFLinkExtension extends WFExtension {
             $where[] = 'section = ' . $db->Quote($section);
             $where[] = 'access <= ' . (int) $user->get('aid');
         }
-        
+
         if ($wf->getParam('category_alias', 1) == 1) {
             if (is_object($query)) {
                 //sqlsrv changes
-                $case = ' CASE WHEN ';
+                $case = ', CASE WHEN ';
                 $case .= $query->charLength('alias', '!=', '0');
                 $case .= ' THEN ';
-                $a_id  = $query->castAsChar('id');
+                $a_id = $query->castAsChar('id');
                 $case .= $query->concatenate(array($a_id, 'alias'), ':');
                 $case .= ' ELSE ';
                 $case .= $a_id . ' END as slug';
@@ -167,12 +168,12 @@ class WFLinkExtension extends WFExtension {
                 $case .= ', CASE WHEN CHAR_LENGTH(alias) THEN CONCAT_WS(":", id, alias) ELSE id END as slug';
             }
         }
-        
+
         if (is_object($query)) {
             $where[] = 'published = 1';
-            $query->select('id AS slug, id AS id, title, alias, access, ' . $case)->from('#__categories')->where($where)->order('title');
+            $query->select('id AS slug, id AS id, title, alias, access' . $language . $case)->from('#__categories')->where($where)->order('title');
         } else {
-            $query  = 'SELECT id AS slug, id AS id, title, alias, access' . $case;
+            $query = 'SELECT id AS slug, id AS id, title, alias, access' . $case;
             $query .= ' FROM #__categories';
             $query .= ' WHERE ' . implode(' AND ', $where);
             $query .= ' ORDER BY title';
@@ -193,13 +194,14 @@ class WFLinkExtension extends WFExtension {
     public function getItemId($component, $needles = array()) {
         $match = null;
 
-        require_once(JPATH_SITE . '/includes/application.php');
+        //require_once(JPATH_SITE . '/includes/application.php');
+        $app = JApplication::getInstance('site');
 
         $tag = defined('JPATH_PLATFORM') ? 'component_id' : 'componentid';
 
-        $component = JComponentHelper::getComponent($component);
-        $menu = JSite::getMenu();
-        $items = $menu->getItems($tag, $component->id);
+        $component  = JComponentHelper::getComponent($component);
+        $menu       = $app->getMenu('site');
+        $items      = $menu->getItems($tag, $component->id);
 
         if ($items) {
             foreach ($needles as $needle => $id) {
@@ -218,6 +220,28 @@ class WFLinkExtension extends WFExtension {
     }
 
     /**
+     * Translates an internal Joomla URL to a humanly readible URL.
+     *
+     * @param   string   $url    Absolute or Relative URI to Joomla resource.
+     *
+     * @return  The translated humanly readible URL.
+     */
+    public static function route($url) {
+        $app    = JApplication::getInstance('site');
+        $router = $app->getRouter('site');
+
+        if (!$router) {
+            return $url;
+        }
+
+        $uri = $router->build($url);
+        $url = $uri->toString();
+        $url = str_replace('/administrator/', '/', $url);
+
+        return $url;
+    }
+
+    /**
      * XML encode a string.
      *
      * @access	public
@@ -227,6 +251,9 @@ class WFLinkExtension extends WFExtension {
     private static function xmlEncode($string) {
         return str_replace(array('&', '<', '>', "'", '"'), array('&amp;', '&lt;', '&gt;', '&apos;', '&quot;'), $string);
     }
+
 }
 
-abstract class WFLinkBrowser extends WFLinkExtension {}
+abstract class WFLinkBrowser extends WFLinkExtension {
+    
+}

@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -82,7 +82,7 @@ class WFViewCpanel extends WFView {
                 // get params definitions
                 $params = new WFParameter($component->params, '', 'preferences');
                 
-                $width      = (int) $params->get('browser_width', 780);
+                $width      = (int) $params->get('browser_width', 790);
                 $height     = (int) $params->get('browser_height', 560);
                 
                 if (empty($link)) {

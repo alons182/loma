@@ -2,7 +2,7 @@
 
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2013 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2014 Ryan Demmer. All rights reserved.
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -32,6 +32,10 @@ class WFClipboardPluginConfig
                 
                 $settings['clipboard_paste_process_footnotes']          = $wf->getParam('clipboard.paste_process_footnotes', 'convert', 'convert');
                 $settings['clipboard_paste_upload_images']              = $wf->getParam('clipboard.paste_upload_images', 0, 0);
+                
+                $settings['clipboard_paste_remove_tags']                = $wf->getParam('clipboard.paste_remove_tags', '', '');
+                $settings['clipboard_paste_keep_tags']                = $wf->getParam('clipboard.paste_keep_tags', '', '');
+                $settings['clipboard_paste_filter']                     = $wf->getParam('clipboard.paste_filter', '', '');
 	}
 }
 ?>
